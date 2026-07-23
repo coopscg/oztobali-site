@@ -130,6 +130,15 @@ export function holidayCategorySEO(cat: HolidayCategoryInfo): SEOInput {
   };
 }
 
+export function partnerSEO(): SEOInput {
+  return {
+    title: 'Partner With OztoBali | Advertise to Australians Moving to Bali',
+    description:
+      'Reach Australians actively researching visas, property, and moving to Bali. Directory listings, featured placements, and content partnerships.',
+    path: '/partner',
+  };
+}
+
 export function creditsSEO(): SEOInput {
   return {
     title: 'Photo Credits | OztoBali',
@@ -228,6 +237,7 @@ export function getAllRoutes(): string[] {
     ...blogPosts.map((post) => `/blog/${post.slug}`),
     '/contact',
     '/credits',
+    '/partner',
   ];
 }
 
@@ -243,6 +253,7 @@ export function getSEOForRoute(path: string): SEOInput {
   if (path === '/holidays') return holidaysSEO();
   if (path === '/contact') return contactSEO();
   if (path === '/credits') return creditsSEO();
+  if (path === '/partner') return partnerSEO();
   if (path === '/blog') return blogIndexSEO();
   if (path.startsWith('/holidays/')) {
     const slug = path.replace('/holidays/', '');

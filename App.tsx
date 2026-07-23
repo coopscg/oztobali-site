@@ -15,6 +15,7 @@ import Contact from './pages/Contact';
 import BlogIndex from './pages/BlogIndex';
 import BlogPost from './pages/BlogPost';
 import Credits from './pages/Credits';
+import Partner from './pages/Partner';
 
 const App: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const App: React.FC = () => {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/credits" element={<Credits />} />
+        <Route path="/partner" element={<Partner />} />
       </Route>
     </Routes>
   );
