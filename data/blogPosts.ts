@@ -3,6 +3,8 @@ import { BlogPost } from '../types';
 export const blogPosts: BlogPost[] = [
   {
     slug: 'kitas-vs-second-home-visa',
+    image: '/images/visas-immigration-hall.jpg',
+    imageAlt: 'Immigration arrival hall at Bali airport',
     title: 'KITAS vs Second Home Visa: Which One Actually Fits an Australian Moving to Bali?',
     description:
       'Retirement KITAS, Remote Worker KITAS, or the Second Home Visa — a plain-English comparison for Australians deciding how to legally live in Bali long-term.',
@@ -32,6 +34,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'nominee-land-arrangements-now-illegal',
+    image: '/images/property-ricefield-land.jpg',
+    imageAlt: 'Rice field land in Bali',
     title: "The Nominee Trap: Why 'Buying' Bali Land Through a Local Friend Is Now a Crime",
     description:
       "Nominee land arrangements have always been legally void in Indonesia. As of February 2026, they're a criminal offence in Bali. Here's what changed.",
@@ -60,6 +64,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'australian-tax-exit-checklist',
+    image: '/images/home-hero-tanahlot.jpg',
+    imageAlt: 'Tanah Lot sea temple at sunset, Bali',
     title: "Doing Your Australian Tax Exit Properly Before You Leave for Bali",
     description:
       "Leaving Australia doesn't automatically make you a non-resident for tax purposes. Here's what the ATO actually looks at.",
@@ -90,6 +96,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'cost-of-living-bali-for-australians',
+    image: '/images/food-satay-bali.jpg',
+    imageAlt: 'Satay, a popular affordable Balinese food',
     title: 'Cost of Living in Bali for Australians: A Realistic Monthly Budget',
     description:
       'What it actually costs an Australian to live in Bali per month — day-to-day expenses, the costs people forget to budget for, and how it compares to home.',
@@ -128,6 +136,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'bali-property-scams-to-avoid',
+    image: '/images/property-villa-pool.jpg',
+    imageAlt: 'A private villa pool in Bali',
     title: 'Bali Property Scams to Avoid (And How to Spot Them Early)',
     description:
       'The real property scams and traps Australians run into in Bali — from nominee schemes to fake certificates — and how to protect yourself.',

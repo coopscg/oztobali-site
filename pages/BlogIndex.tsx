@@ -35,8 +35,18 @@ const BlogIndex: React.FC = () => {
             >
               <Link
                 to={`/blog/${post.slug}`}
-                className="group block h-full bg-white/[0.03] border border-white/5 rounded-[32px] p-8 hover:bg-white/[0.05] hover:border-[#E3A857]/20 transition-all duration-300"
+                className="group block h-full bg-white/[0.03] border border-white/5 rounded-[32px] overflow-hidden hover:bg-white/[0.05] hover:border-[#E3A857]/20 transition-all duration-300"
               >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.imageAlt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#062420] to-transparent" />
+                </div>
+                <div className="p-8">
                 <div className="flex items-center justify-between mb-6">
                   <span className="px-3 py-1 rounded-full bg-[#E3A857]/10 text-[#E3A857] text-xs font-bold uppercase tracking-widest border border-[#E3A857]/20">
                     {post.category}
@@ -58,6 +68,7 @@ const BlogIndex: React.FC = () => {
                     <Clock className="w-3.5 h-3.5" />
                     {post.readTime}
                   </span>
+                </div>
                 </div>
               </Link>
             </motion.div>

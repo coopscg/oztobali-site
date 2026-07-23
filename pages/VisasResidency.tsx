@@ -18,6 +18,8 @@ const VisasResidency: React.FC = () => {
         eyebrow="Immigration"
         title="Bali Visas & Residency, Explained"
         subtitle={`Every visa an Australian actually uses to holiday, work remotely, retire, or invest in Bali — with real costs. Last verified ${LAST_VERIFIED}.`}
+        image="/images/visas-immigration-hall.jpg"
+        imageAlt="Immigration arrival hall at Bali's Ngurah Rai International Airport"
       />
 
       <section className="px-6 pb-8">

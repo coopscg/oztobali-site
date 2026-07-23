@@ -6,14 +6,14 @@ import {
 import { motion } from 'framer-motion';
 
 const hubs = [
-  { icon: Stamp, title: 'Visas & Residency', desc: 'KITAS, KITAP, Second Home Visa and what they actually cost.', to: '/visas-residency' },
-  { icon: Landmark, title: 'Australian Tax & Exit', desc: 'ATO residency rules and doing your exit properly.', to: '/taxation/australia' },
-  { icon: Receipt, title: 'Indonesian Tax', desc: 'NPWP, tax residency, and rates once you’re there.', to: '/taxation/indonesia' },
-  { icon: KeyRound, title: 'Renting in Bali', desc: 'Lease norms, deposits, and where expats actually live.', to: '/property/renting' },
-  { icon: Building2, title: 'Buying in Bali', desc: 'Hak Pakai, leasehold, PT PMA — and the nominee trap.', to: '/property/buying' },
-  { icon: Users, title: 'Trusted Developers', desc: 'Builders with a real, delivered track record.', to: '/property/developers' },
-  { icon: Sparkles, title: 'Bali Culture', desc: 'Ceremony, custom, and what respect looks like day to day.', to: '/culture' },
-  { icon: Palmtree, title: 'Holiday Guides', desc: 'Family, adventure, party, shopping, cultural — sorted by vibe.', to: '/holidays' },
+  { icon: Stamp, title: 'Visas & Residency', desc: 'KITAS, KITAP, Second Home Visa and what they actually cost.', to: '/visas-residency', image: '/images/visas-immigration-hall.jpg' },
+  { icon: Landmark, title: 'Australian Tax & Exit', desc: 'ATO residency rules and doing your exit properly.', to: '/taxation/australia', image: '/images/home-hero-tanahlot.jpg' },
+  { icon: Receipt, title: 'Indonesian Tax', desc: 'NPWP, tax residency, and rates once you’re there.', to: '/taxation/indonesia', image: '/images/canggu-beach.jpg' },
+  { icon: KeyRound, title: 'Renting in Bali', desc: 'Lease norms, deposits, and where expats actually live.', to: '/property/renting', image: '/images/property-villa-pool.jpg' },
+  { icon: Building2, title: 'Buying in Bali', desc: 'Hak Pakai, leasehold, PT PMA — and the nominee trap.', to: '/property/buying', image: '/images/property-ricefield-land.jpg' },
+  { icon: Users, title: 'Trusted Developers', desc: 'Builders with a real, delivered track record.', to: '/property/developers', image: '/images/holiday-cultural-uluwatu.jpg' },
+  { icon: Sparkles, title: 'Bali Culture', desc: 'Ceremony, custom, and what respect looks like day to day.', to: '/culture', image: '/images/culture-canang-sari.jpg' },
+  { icon: Palmtree, title: 'Holiday Guides', desc: 'Family, adventure, party, shopping, cultural — sorted by vibe.', to: '/holidays', image: '/images/holiday-family-nusadua.jpg' },
 ];
 
 const HubGrid: React.FC = () => {
@@ -35,13 +35,24 @@ const HubGrid: React.FC = () => {
             >
               <Link
                 to={hub.to}
-                className="group block h-full bg-white/[0.03] border border-white/5 rounded-2xl p-6 hover:border-[#E3A857]/30 hover:bg-white/[0.05] transition-all"
+                className="group block h-full bg-white/[0.03] border border-white/5 rounded-2xl overflow-hidden hover:border-[#E3A857]/30 hover:bg-white/[0.05] transition-all"
               >
-                <div className="w-11 h-11 rounded-xl bg-[#E3A857]/10 flex items-center justify-center mb-4 group-hover:bg-[#E3A857]/20 transition-colors">
-                  <hub.icon className="w-5 h-5 text-[#E3A857]" />
+                <div className="relative h-28 overflow-hidden">
+                  <img
+                    src={hub.image}
+                    alt=""
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#062420] via-[#062420]/20 to-transparent" />
+                  <div className="absolute bottom-2 left-2 w-9 h-9 rounded-lg bg-[#062420]/80 backdrop-blur flex items-center justify-center">
+                    <hub.icon className="w-4 h-4 text-[#E3A857]" />
+                  </div>
                 </div>
-                <h3 className="font-bold text-[#F6EFE4] mb-1.5">{hub.title}</h3>
-                <p className="text-sm text-[#8FA69E] leading-snug">{hub.desc}</p>
+                <div className="p-6">
+                  <h3 className="font-bold text-[#F6EFE4] mb-1.5">{hub.title}</h3>
+                  <p className="text-sm text-[#8FA69E] leading-snug">{hub.desc}</p>
+                </div>
               </Link>
             </motion.div>
           ))}

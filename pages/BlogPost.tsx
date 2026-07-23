@@ -36,6 +36,10 @@ const BlogPost: React.FC = () => {
             {post.title}
           </h1>
 
+          <div className="rounded-3xl overflow-hidden mb-10 h-64 md:h-80">
+            <img src={post.image} alt={post.imageAlt} className="w-full h-full object-cover" loading="eager" />
+          </div>
+
           <div className="flex items-center gap-6 text-sm text-[#8FA69E] font-medium uppercase tracking-wider mb-12 pb-12 border-b border-white/5">
             <span className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />

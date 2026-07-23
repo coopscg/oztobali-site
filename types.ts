@@ -50,6 +50,8 @@ export interface BlogPost {
   readTime: string;
   excerpt: string;
   content: BlogBlock[];
+  image: string;
+  imageAlt: string;
 }
 
 export interface EnquiryForm {

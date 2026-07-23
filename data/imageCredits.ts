@@ -70,4 +70,32 @@ export const imageCredits: ImageCredit[] = [
     license: 'CC BY 4.0',
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Rice_terraces,_Bali.jpg',
   },
+  {
+    file: 'visas-immigration-hall.jpg',
+    title: 'Immigration arrival hall, Bali (DPS) Airport',
+    author: 'Pinterpandai.com',
+    license: 'CC BY-SA 3.0',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Immigration_arrival_hall_at_DPS_airport_(International_Bali_Airport).jpg',
+  },
+  {
+    file: 'sanur-beach-morning.jpg',
+    title: 'Morning in Sanur Beach, Bali',
+    author: 'Danangtrihartanto',
+    license: 'CC BY-SA 4.0',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Morning_in_Sanur_Beach,_Bali.jpg',
+  },
+  {
+    file: 'food-satay-bali.jpg',
+    title: 'Satay in Bali',
+    author: 'Becky Stern',
+    license: 'CC BY-SA 2.0',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Satay_in_Bali.jpg',
+  },
+  {
+    file: 'canggu-beach.jpg',
+    title: 'Canggu Beach',
+    author: 'Mx. Granger',
+    license: 'CC0 (public domain)',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Canggu_beach_2.jpg',
+  },
 ];
