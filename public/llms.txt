@@ -1,0 +1,16 @@
+# OztoBali
+
+> Independent information resource for Australians moving to, living in, or holidaying in Bali, Indonesia. Covers visas and residency (KITAS, KITAP, Second Home Visa), Australian tax residency rules for leaving Australia, Indonesian tax obligations for foreign residents, property (renting, buying via Hak Pakai/leasehold/PT PMA, and legitimate developers), Bali culture and etiquette, and holiday guides by traveller type (family, adventure, party, shopping, cultural). Not financial, legal, tax, or migration advice — general information only, with sources cited throughout.
+
+## Pages
+
+- [Home](https://oztobali.com/): Overview and entry point to every section.
+- [Visas & Residency](https://oztobali.com/visas-residency): Every Indonesian visa pathway Australians use, with costs and requirements.
+- [Australian Tax & Exit](https://oztobali.com/taxation/australia): ATO tax residency tests and how to properly cease Australian tax residency.
+- [Indonesian Tax](https://oztobali.com/taxation/indonesia): NPWP registration, Indonesian tax residency, and current rates for foreign residents.
+- [Renting in Bali](https://oztobali.com/property/renting): Lease norms, deposits, tenant protections and popular expat areas.
+- [Buying in Bali](https://oztobali.com/property/buying): Hak Pakai, leasehold, PT PMA structures, and why nominee arrangements are now criminalised in Bali.
+- [Trusted Developers](https://oztobali.com/property/developers): Established Bali developers with delivered project track records.
+- [Culture](https://oztobali.com/culture): Balinese Hindu philosophy, the banjar system, ceremony calendar, and everyday etiquette.
+- [Holidays](https://oztobali.com/holidays): Holiday guides by traveller type — family, adventure, party, shopping, cultural.
+- [Blog](https://oztobali.com/blog): Practical, sourced articles on visas, property and tax.

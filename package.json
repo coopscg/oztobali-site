@@ -1,0 +1,26 @@
+{
+  "name": "oztobali",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --ssr entry-server.tsx --outDir dist-ssr && node prerender.mjs",
+    "build:client-only": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.6.1",
+    "framer-motion": "^12.29.0",
+    "lucide-react": "^0.563.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
