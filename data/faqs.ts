@@ -26,4 +26,24 @@ export const faqs: FAQ[] = [
     answer:
       "Two, most often: working on the wrong visa (tourist/C1 instead of a proper KITAS), and using informal nominee arrangements to 'buy' land that Indonesian law doesn't actually let foreigners own outright. Both are avoidable with the right advice up front.",
   },
+  {
+    question: 'Does getting a Second Home Visa affect my Australian tax residency?',
+    answer:
+      "Not directly — Indonesian visa status and Australian tax residency are assessed independently, under completely different tests. But holding a long-term Indonesian visa is exactly the kind of evidence the ATO looks at when weighing up your 'totality of circumstances' for residency, so the two are related in practice even though they're separate questions. See our Australian Tax & Exit guide.",
+  },
+  {
+    question: 'What does it actually cost to live in Bali per month as an Australian?',
+    answer:
+      "Day-to-day living (food, a driver, household staff, local transport) is genuinely cheap by Australian standards. What catches people out is everything outside daily spending — visa renewals, international health insurance, flights home, and school fees if you're relocating a family. We break down realistic monthly budgets by lifestyle in our cost-of-living guide.",
+  },
+  {
+    question: 'What are the best areas to live in Bali for Australian expats?',
+    answer:
+      "It depends entirely on what you're optimising for — Canggu and Berawa for the remote-work/surf crowd, Ubud for a quieter, greener pace, Sanur for families and retirees, Uluwatu for cliff/surf living. See our Holidays guides for an area-by-area breakdown, since the same neighbourhoods that make a great holiday base often make a great long-term one too.",
+  },
+  {
+    question: 'How do I avoid property scams when buying in Bali?',
+    answer:
+      "Never use a nominee arrangement (now criminalised in Bali), always verify the certificate directly with the local BPN land office, confirm zoning (KKPR) status before assuming a property can be used commercially, and use a licensed PPAT notary for the deed of sale — never pay a seller directly without an escrow arrangement. Full checklist in our Buying in Bali guide.",
+  },
 ];

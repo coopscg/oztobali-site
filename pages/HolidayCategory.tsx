@@ -18,7 +18,7 @@ const HolidayCategory: React.FC = () => {
 
   return (
     <>
-      <PageHero eyebrow={cat.eyebrow} title={cat.label} subtitle={cat.intro} />
+      <PageHero eyebrow={cat.eyebrow} title={cat.label} subtitle={cat.intro} image={cat.image} imageAlt={cat.imageAlt} />
 
       <section className="px-6 py-8">
         <div className="container mx-auto max-w-6xl">

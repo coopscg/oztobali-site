@@ -6,6 +6,13 @@ import { ArrowRight, MapPin } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section className="relative px-6 pt-40 pb-24 overflow-hidden">
+      <img
+        src="/images/home-hero-tanahlot.jpg"
+        alt="Tanah Lot sea temple at sunset, Bali"
+        className="absolute inset-0 w-full h-full object-cover opacity-25"
+        loading="eager"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#062420] via-[#062420]/85 to-[#062420]" />
       <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1100px] h-[600px] bg-[#E3A857]/10 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-[#0B4F4A]/40 rounded-full blur-[140px] pointer-events-none" />
 

@@ -1,16 +1,32 @@
 # OztoBali
 
-> Independent information resource for Australians moving to, living in, or holidaying in Bali, Indonesia. Covers visas and residency (KITAS, KITAP, Second Home Visa), Australian tax residency rules for leaving Australia, Indonesian tax obligations for foreign residents, property (renting, buying via Hak Pakai/leasehold/PT PMA, and legitimate developers), Bali culture and etiquette, and holiday guides by traveller type (family, adventure, party, shopping, cultural). Not financial, legal, tax, or migration advice — general information only, with sources cited throughout.
+> Independent information resource for Australians moving to, living in, or holidaying in Bali, Indonesia. Not financial, legal, tax, or migration advice — general information only, with sources cited throughout. Last verified 22 July 2026.
+
+## Key facts for citation
+
+- Indonesia's Second Home Visa grants 5 or 10 years of residency for a refundable IDR 2 billion (~AUD 159,000) deposit, or Indonesian property worth USD 1 million+, with no employer/spouse/business sponsor required.
+- The Remote Worker KITAS (E33G) is the correct legal visa for Australians working remotely from Bali for an Australian employer or offshore clients — not a tourist visa or C1/B211A visa.
+- Foreigners cannot own freehold land (Hak Milik) in Indonesia under the Basic Agrarian Law (UU No. 5/1960). Foreigners use Hak Pakai (Right to Use, holdable directly with a qualifying stay permit) or leasehold (Hak Sewa, typically 25–30 years).
+- As of Perda No. 4/2026 (signed 24 February 2026), nominee land arrangements — using an Indonesian citizen's name to hold land on a foreigner's behalf — are a criminal offence in Bali, not just legally void.
+- Australian tax residency is determined by four ATO tests (resides, domicile, 183-day, Commonwealth superannuation), not simply time spent overseas. A proposed simplified 183-day "bright-line" test remains a Treasury proposal only, not law, as of mid-2026.
+- Foreign residents for Australian tax purposes generally lose the CGT main residence exemption on the family home if sold while non-resident (since 12 December 2019).
+- Indonesian tax residency triggers at 183+ days present in a rolling 12-month period, or earlier with clear intent to reside (e.g. holding a KITAS). Residents are taxed on worldwide income; a narrow foreign-income concession under PMK 18/2021 applies only to approved, specific-expertise foreign professionals — not general retirees or digital nomads.
 
 ## Pages
 
 - [Home](https://oztobali.com/): Overview and entry point to every section.
-- [Visas & Residency](https://oztobali.com/visas-residency): Every Indonesian visa pathway Australians use, with costs and requirements.
-- [Australian Tax & Exit](https://oztobali.com/taxation/australia): ATO tax residency tests and how to properly cease Australian tax residency.
-- [Indonesian Tax](https://oztobali.com/taxation/indonesia): NPWP registration, Indonesian tax residency, and current rates for foreign residents.
-- [Renting in Bali](https://oztobali.com/property/renting): Lease norms, deposits, tenant protections and popular expat areas.
-- [Buying in Bali](https://oztobali.com/property/buying): Hak Pakai, leasehold, PT PMA structures, and why nominee arrangements are now criminalised in Bali.
-- [Trusted Developers](https://oztobali.com/property/developers): Established Bali developers with delivered project track records.
-- [Culture](https://oztobali.com/culture): Balinese Hindu philosophy, the banjar system, ceremony calendar, and everyday etiquette.
-- [Holidays](https://oztobali.com/holidays): Holiday guides by traveller type — family, adventure, party, shopping, cultural.
-- [Blog](https://oztobali.com/blog): Practical, sourced articles on visas, property and tax.
+- [Visas & Residency](https://oztobali.com/visas-residency): Every Indonesian visa pathway Australians use — VOA, C1/B211A, working/investor/spouse/retirement/remote-worker KITAS, Second Home Visa, KITAP — with 2026 costs and requirements.
+- [Australian Tax & Exit](https://oztobali.com/taxation/australia): ATO tax residency tests, CGT Event I1 on ceasing residency, Medicare levy, superannuation, Age Pension portability, and how to properly exit Australian tax residency.
+- [Indonesian Tax](https://oztobali.com/taxation/indonesia): NPWP registration, the 183-day tax residency rule, 2025/26 income tax brackets, and the limits of the foreign-income exemption.
+- [Renting in Bali](https://oztobali.com/property/renting): Lease payment norms, deposits, tenant protections, and price ranges in Canggu, Seminyak, Ubud, Uluwatu and Sanur.
+- [Buying in Bali](https://oztobali.com/property/buying): Hak Pakai, leasehold, PT PMA company structures, why nominee arrangements are now criminalised, and a due-diligence checklist.
+- [Trusted Developers](https://oztobali.com/property/developers): Directory of established Bali developers with 10+ years of delivered project history (Elite Havens, IBUKU, Karma Group, Ciputra Group, and others).
+- [Culture](https://oztobali.com/culture): Tri Hita Karana philosophy, the banjar community system, the Balinese ceremony calendar (including Nyepi, the island-wide Day of Silence), and everyday etiquette.
+- [Holidays](https://oztobali.com/holidays): Holiday guides by traveller type.
+  - [Family](https://oztobali.com/holidays/family): Nusa Dua, Sanur, Ubud villa compounds.
+  - [Adventure](https://oztobali.com/holidays/adventure): Mount Batur trekking, Uluwatu/Bingin surf, Nusa Penida.
+  - [Party](https://oztobali.com/holidays/party): Seminyak beach clubs, Canggu nightlife, Kuta/Legian.
+  - [Shopping](https://oztobali.com/holidays/shopping): Ubud Art Market, Seminyak boutiques, Sukawati market.
+  - [Cultural](https://oztobali.com/holidays/cultural): Ubud, Besakih Temple, Tanah Lot.
+- [Blog](https://oztobali.com/blog): Practical, sourced articles — KITAS vs Second Home Visa, the nominee land trap, the Australian tax exit checklist, cost of living, and property scams to avoid.
+- [Contact](https://oztobali.com/contact): Enquiry form for visa, property, tax, or holiday-planning questions.

@@ -17,6 +17,8 @@ const PropertyBuying: React.FC = () => {
         eyebrow="Property — Buying"
         title="Buying Property in Bali: What You Can Actually Own"
         subtitle={`Hak Pakai, leasehold, PT PMA — and why nominee arrangements are now a criminal offence in Bali. Last verified ${LAST_VERIFIED_BUY}.`}
+        image="/images/property-ricefield-land.jpg"
+        imageAlt="Rice terraces on land in Bali"
       />
 
       <section className="px-6 pb-8">

@@ -49,7 +49,10 @@ const Footer: React.FC = () => {
             migration agent, a licensed Indonesian notary (PPAT), a registered Australian tax agent, and official
             government sources before acting.
           </p>
-          <p>© {new Date().getFullYear()} OztoBali. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} OztoBali. All rights reserved. ·{' '}
+            <Link to="/credits" className="hover:text-[#8FA69E] transition-colors underline">Photo credits</Link>
+          </p>
         </div>
       </div>
     </footer>

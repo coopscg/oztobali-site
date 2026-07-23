@@ -2,6 +2,7 @@ import { SITE_URL, DEFAULT_OG_IMAGE, SEOInput } from './tags';
 import { blogPosts, BlogPost } from '../data/blogPosts';
 import { faqs } from '../data/faqs';
 import { holidayCategories, HolidayCategoryInfo } from '../data/holidayPlaces';
+import { developers } from '../data/developers';
 
 export function homeSEO(): SEOInput {
   return {
@@ -80,6 +81,16 @@ export function propertyDevelopersSEO(): SEOInput {
     description:
       'Established Bali developers and builders with genuinely delivered projects — from luxury villa groups to large-scale resort developers.',
     path: '/property/developers',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: developers.map((dev, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: dev.name,
+        url: dev.website,
+      })),
+    },
   };
 }
 
@@ -98,6 +109,16 @@ export function holidaysSEO(): SEOInput {
     description:
       'Find the right kind of Bali holiday — family-friendly, adventure, nightlife, shopping, or cultural — with areas, prices and practical tips for each.',
     path: '/holidays',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: holidayCategories.map((cat, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: cat.label,
+        url: `${SITE_URL}/holidays/${cat.slug}`,
+      })),
+    },
   };
 }
 
@@ -106,6 +127,14 @@ export function holidayCategorySEO(cat: HolidayCategoryInfo): SEOInput {
     title: `${cat.label} in Bali: Where to Go & What to Know | OztoBali`,
     description: cat.intro,
     path: `/holidays/${cat.slug}`,
+  };
+}
+
+export function creditsSEO(): SEOInput {
+  return {
+    title: 'Photo Credits | OztoBali',
+    description: 'Attribution for the freely licensed Bali photography used across this site.',
+    path: '/credits',
   };
 }
 
@@ -198,6 +227,7 @@ export function getAllRoutes(): string[] {
     '/blog',
     ...blogPosts.map((post) => `/blog/${post.slug}`),
     '/contact',
+    '/credits',
   ];
 }
 
@@ -212,6 +242,7 @@ export function getSEOForRoute(path: string): SEOInput {
   if (path === '/culture') return cultureSEO();
   if (path === '/holidays') return holidaysSEO();
   if (path === '/contact') return contactSEO();
+  if (path === '/credits') return creditsSEO();
   if (path === '/blog') return blogIndexSEO();
   if (path.startsWith('/holidays/')) {
     const slug = path.replace('/holidays/', '');

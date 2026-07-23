@@ -17,6 +17,8 @@ const PropertyRenting: React.FC = () => {
         eyebrow="Property — Renting"
         title="Renting in Bali, Done Properly"
         subtitle={`Lease norms, deposits, and what actually protects you as a tenant. Last verified ${LAST_VERIFIED_RENT}.`}
+        image="/images/property-villa-pool.jpg"
+        imageAlt="A private villa pool in Bali"
       />
 
       <section className="px-6 pb-8">

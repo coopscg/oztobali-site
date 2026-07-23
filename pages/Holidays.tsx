@@ -31,14 +31,25 @@ const Holidays: React.FC = () => {
             >
               <Link
                 to={`/holidays/${cat.slug}`}
-                className="group block h-full bg-white/[0.03] border border-white/5 rounded-3xl p-8 hover:border-[#E3A857]/30 hover:bg-white/[0.05] transition-all"
+                className="group block h-full bg-white/[0.03] border border-white/5 rounded-3xl overflow-hidden hover:border-[#E3A857]/30 hover:bg-white/[0.05] transition-all"
               >
-                <span className="text-xs font-bold uppercase tracking-widest text-[#E3A857]">{cat.eyebrow}</span>
-                <h2 className="text-2xl font-bold text-[#F6EFE4] mt-2 mb-3">{cat.label}</h2>
-                <p className="text-sm text-[#B9CFC9] leading-relaxed mb-5">{cat.intro}</p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#E3A857] group-hover:gap-2.5 transition-all">
-                  Explore {cat.label} <ArrowRight className="w-4 h-4" />
-                </span>
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={cat.image}
+                    alt={cat.imageAlt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#062420] to-transparent" />
+                </div>
+                <div className="p-8 pt-6">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#E3A857]">{cat.eyebrow}</span>
+                  <h2 className="text-2xl font-bold text-[#F6EFE4] mt-2 mb-3">{cat.label}</h2>
+                  <p className="text-sm text-[#B9CFC9] leading-relaxed mb-5">{cat.intro}</p>
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#E3A857] group-hover:gap-2.5 transition-all">
+                    Explore {cat.label} <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
               </Link>
             </motion.div>
           ))}

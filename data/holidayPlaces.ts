@@ -7,11 +7,15 @@ export interface HolidayCategoryInfo {
   intro: string;
   places: HolidayPlace[];
   tips: string[];
+  image: string;
+  imageAlt: string;
 }
 
 export const holidayCategories: HolidayCategoryInfo[] = [
   {
     slug: 'family',
+    image: '/images/holiday-family-nusadua.jpg',
+    imageAlt: 'Calm beachfront at Nusa Dua, Bali',
     label: 'Family Holidays',
     eyebrow: 'Family-Friendly',
     intro:
@@ -30,6 +34,8 @@ export const holidayCategories: HolidayCategoryInfo[] = [
   },
   {
     slug: 'adventure',
+    image: '/images/holiday-adventure-kelingking.jpg',
+    imageAlt: 'Kelingking Beach cliff viewpoint, Nusa Penida, Bali',
     label: 'Adventure Holidays',
     eyebrow: 'Get Outside',
     intro:
@@ -48,6 +54,8 @@ export const holidayCategories: HolidayCategoryInfo[] = [
   },
   {
     slug: 'party',
+    image: '/images/holiday-party-kuta.jpg',
+    imageAlt: 'Sunset over Kuta Beach, Bali',
     label: 'Party & Nightlife',
     eyebrow: 'After Dark',
     intro:
@@ -66,6 +74,8 @@ export const holidayCategories: HolidayCategoryInfo[] = [
   },
   {
     slug: 'shopping',
+    image: '/images/holiday-shopping-ubud.jpg',
+    imageAlt: 'Ubud Palace, Bali',
     label: 'Shopping Holidays',
     eyebrow: 'Retail Therapy',
     intro:
@@ -84,6 +94,8 @@ export const holidayCategories: HolidayCategoryInfo[] = [
   },
   {
     slug: 'cultural',
+    image: '/images/holiday-cultural-uluwatu.jpg',
+    imageAlt: 'Pura Luhur Uluwatu clifftop temple, Bali',
     label: 'Cultural Holidays',
     eyebrow: 'Temples & Tradition',
     intro:

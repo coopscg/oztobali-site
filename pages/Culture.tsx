@@ -16,6 +16,8 @@ const Culture: React.FC = () => {
         eyebrow="Culture"
         title="Bali Culture & Way of Life"
         subtitle="What Australians need to understand and respect — from daily offerings to the island-wide Day of Silence."
+        image="/images/culture-canang-sari.jpg"
+        imageAlt="A canang sari offering, placed daily outside Balinese homes and businesses"
       />
 
       <section className="px-6 py-8">

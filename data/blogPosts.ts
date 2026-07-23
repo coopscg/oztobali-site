@@ -88,6 +88,69 @@ export const blogPosts: BlogPost[] = [
       { type: 'p', text: "You may have read about a proposed simplified 183-day residency test. As of mid-2026 this remains a Treasury proposal only — no legislation has been introduced. Don't plan your exit around a rule that doesn't exist yet. Full detail is on our Australian Tax & Exit guide." },
     ],
   },
+  {
+    slug: 'cost-of-living-bali-for-australians',
+    title: 'Cost of Living in Bali for Australians: A Realistic Monthly Budget',
+    description:
+      'What it actually costs an Australian to live in Bali per month — day-to-day expenses, the costs people forget to budget for, and how it compares to home.',
+    category: 'Lifestyle',
+    date: '2026-07-20',
+    readTime: '6 min read',
+    excerpt: "Day-to-day living is genuinely cheap. It's everything outside daily spending that catches people out.",
+    content: [
+      { type: 'p', text: "Every Bali cost-of-living article leads with how cheap the coffee and the massages are. That's true, and it's also not the number that determines whether your move actually works financially. Here's a more complete picture." },
+      { type: 'h2', text: 'The genuinely cheap stuff' },
+      {
+        type: 'ul',
+        items: [
+          'Local food (warungs): AUD 2–5 per meal.',
+          'A full-time household driver or staff member: often AUD 300–500/month.',
+          'Local-brand groceries and produce: a fraction of Australian supermarket prices.',
+          'Scooter rental: roughly AUD 60–100/month.',
+        ],
+      },
+      { type: 'h2', text: "What people forget to budget for" },
+      {
+        type: 'ul',
+        items: [
+          'International health insurance — genuinely necessary, and not cheap if you want a policy that covers medical evacuation.',
+          'Visa costs and renewals — annual for most KITAS categories, plus agent fees most people pay rather than navigating immigration offices solo.',
+          'Imported goods and Western-brand groceries — priced close to or above Australian prices in expat supermarkets.',
+          'Flights home — even budget fares add up if you\'re returning for family events multiple times a year.',
+          "School fees, if you're relocating with kids — international schools in Bali are not the cheap option.",
+        ],
+      },
+      { type: 'h2', text: 'Rough monthly figures by lifestyle' },
+      { type: 'p', text: "A single remote worker living simply in Canggu or Ubud, renting a modest villa room and eating mostly local food, can realistically get by on AUD 1,500–2,500/month all-in, insurance included. A couple in a private villa with a pool, eating out regularly and running a scooter each, is more realistically AUD 3,000–4,500/month. A family of four wanting an international school and a car with driver is a different order of magnitude — often AUD 6,000–10,000+/month once school fees are in." },
+      { type: 'h2', text: 'The honest comparison to Australia' },
+      { type: 'p', text: "For most day-to-day costs, yes, Bali is significantly cheaper than any Australian capital city. But the gap narrows fast once visas, insurance, flights, and (for families) schooling enter the picture. Budget for the whole picture, not just the exchange rate on a plate of nasi goreng." },
+    ],
+  },
+  {
+    slug: 'bali-property-scams-to-avoid',
+    title: 'Bali Property Scams to Avoid (And How to Spot Them Early)',
+    description:
+      'The real property scams and traps Australians run into in Bali — from nominee schemes to fake certificates — and how to protect yourself.',
+    category: 'Property',
+    date: '2026-07-21',
+    readTime: '6 min read',
+    excerpt: "Most Bali property disasters aren't exotic scams — they're skipped due diligence on very ordinary paperwork.",
+    content: [
+      { type: 'p', text: "Bali property horror stories tend to follow a small number of repeating patterns. None of them require sophisticated fraud to pull off — they rely on buyers skipping basic verification because everyone's in a hurry and the deal feels too good to slow down." },
+      { type: 'h2', text: '1. The nominee scheme' },
+      { type: 'p', text: "Covered in depth in our Buying in Bali guide — using an Indonesian nominee to hold freehold title on your behalf is legally void, and as of February 2026 it's a criminal offence in Bali specifically. If anyone offers you this as a solution rather than flagging it as a serious risk, that's your answer about their credibility." },
+      { type: 'h2', text: '2. The certificate that isn\'t what it looks like' },
+      { type: 'p', text: "Land certificates can be forged, outdated, or attached to a different parcel than the one you're actually looking at. Always verify directly with the local Kantor Pertanahan/BPN office yourself (or through your own independent notary, not the seller's) — never rely on a photocopy the seller or agent hands you." },
+      { type: 'h2', text: "3. The zoning surprise" },
+      { type: 'p', text: "A block of land can be perfectly legitimate but zoned in a way that never allows the villa rental business you're planning. Since Bali introduced the KKPR zoning-approval requirement ahead of any commercial licence, confirming zoning before you buy — not after — is non-negotiable." },
+      { type: 'h2', text: '4. Paying the seller directly' },
+      { type: 'p', text: "Funds should move through a notary's escrow account, released only once the deed is signed and registration is underway — never wired straight to a seller's personal account based on trust or time pressure." },
+      { type: 'h2', text: "5. Unregistered adat (customary) claims" },
+      { type: 'p', text: "Bali-specific: some land carries customary claims from the local desa adat that don't always show up cleanly in the formal certificate system. Ask your notary specifically about this, and speak to neighbouring landowners if anything feels rushed." },
+      { type: 'h2', text: 'The pattern behind all five' },
+      { type: 'p', text: "Every one of these traps is beatable with unhurried, independent due diligence — a licensed PPAT notary, a direct BPN certificate check, and confirmed zoning, done before any money moves. The common thread in every horror story we found researching this is pressure to move fast. Slow down instead." },
+    ],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
