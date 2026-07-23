@@ -1,36 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle2, Mail } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 import PageHero from '../components/PageHero';
 import { useSEO } from '../hooks/useSEO';
 import { contactSEO } from '../seo/pages';
-import { EnquiryForm } from '../types';
 
-const initialForm: EnquiryForm = {
-  name: '',
-  email: '',
-  interest: 'Just researching',
-  timeframe: 'No timeframe yet',
-  message: '',
-};
+const FORMSPREE_ID = 'mbdnawpo';
+
+const inputClass =
+  'w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3.5 text-[#F6EFE4] placeholder:text-[#5E7871] focus:outline-none focus:border-[#E3A857]/60 transition-colors';
 
 const Contact: React.FC = () => {
   useSEO(contactSEO());
-  const [form, setForm] = useState<EnquiryForm>(initialForm);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setForm(initialForm);
-  };
+  const [state, handleSubmit, resetForm] = useForm(FORMSPREE_ID);
 
   return (
     <>
@@ -43,7 +26,7 @@ const Contact: React.FC = () => {
       <section className="px-6 pb-24">
         <div className="container mx-auto max-w-2xl">
           <div className="bg-white/[0.03] border border-white/5 rounded-[32px] p-8 md:p-10">
-            {submitted ? (
+            {state.succeeded ? (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -55,7 +38,7 @@ const Contact: React.FC = () => {
                   We'll be in touch soon with the right next steps for your situation.
                 </p>
                 <button
-                  onClick={() => setSubmitted(false)}
+                  onClick={() => resetForm()}
                   className="mt-4 text-[#E3A857] font-bold text-sm hover:text-white transition-colors"
                 >
                   Send another enquiry
@@ -64,30 +47,12 @@ const Contact: React.FC = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <input
-                    required
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="Full Name"
-                    className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3.5 text-[#F6EFE4] placeholder:text-[#5E7871] focus:outline-none focus:border-[#E3A857]/60 transition-colors"
-                  />
-                  <input
-                    required
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="Email Address"
-                    className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3.5 text-[#F6EFE4] placeholder:text-[#5E7871] focus:outline-none focus:border-[#E3A857]/60 transition-colors"
-                  />
+                  <input required name="name" placeholder="Full Name" className={inputClass} />
+                  <input required type="email" name="email" placeholder="Email Address" className={inputClass} />
                 </div>
-                <select
-                  name="interest"
-                  value={form.interest}
-                  onChange={handleChange}
-                  className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3.5 text-[#F6EFE4] focus:outline-none focus:border-[#E3A857]/60 transition-colors"
-                >
+                <ValidationError prefix="Email" field="email" errors={state.errors} className="text-sm text-[#D9714E]" />
+
+                <select name="interest" defaultValue="Just researching" className={inputClass}>
                   <option>Just researching</option>
                   <option>Visas & residency</option>
                   <option>Renting in Bali</option>
@@ -96,12 +61,7 @@ const Contact: React.FC = () => {
                   <option>Planning a holiday</option>
                   <option>Other</option>
                 </select>
-                <select
-                  name="timeframe"
-                  value={form.timeframe}
-                  onChange={handleChange}
-                  className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3.5 text-[#F6EFE4] focus:outline-none focus:border-[#E3A857]/60 transition-colors"
-                >
+                <select name="timeframe" defaultValue="No timeframe yet" className={inputClass}>
                   <option>No timeframe yet</option>
                   <option>Within 3 months</option>
                   <option>3–12 months</option>
@@ -110,17 +70,18 @@ const Contact: React.FC = () => {
                 </select>
                 <textarea
                   name="message"
-                  value={form.message}
-                  onChange={handleChange}
                   placeholder="Tell us a bit about your situation..."
                   rows={4}
-                  className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3.5 text-[#F6EFE4] placeholder:text-[#5E7871] focus:outline-none focus:border-[#E3A857]/60 transition-colors resize-none"
+                  className={`${inputClass} resize-none`}
                 />
+                <ValidationError prefix="Message" field="message" errors={state.errors} className="text-sm text-[#D9714E]" />
+
                 <button
                   type="submit"
-                  className="w-full py-4 bg-[#E3A857] text-[#062420] font-black text-lg rounded-xl hover:bg-[#F6EFE4] transition-all transform active:scale-[0.99] flex items-center justify-center gap-2"
+                  disabled={state.submitting}
+                  className="w-full py-4 bg-[#E3A857] text-[#062420] font-black text-lg rounded-xl hover:bg-[#F6EFE4] transition-all transform active:scale-[0.99] flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Enquiry <Send className="w-5 h-5" />
+                  {state.submitting ? 'Sending...' : 'Send Enquiry'} <Send className="w-5 h-5" />
                 </button>
               </form>
             )}
