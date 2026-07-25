@@ -15,6 +15,13 @@ export const imageCredits: ImageCredit[] = [
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:A_sunset_at_Pura_Tanah_Lot_(2025)_-_img_02.jpg',
   },
   {
+    file: 'oztobali-og.jpg',
+    title: 'A sunset at Pura Tanah Lot (social share crop)',
+    author: 'Chainwit.',
+    license: 'CC BY 4.0',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:A_sunset_at_Pura_Tanah_Lot_(2025)_-_img_02.jpg',
+  },
+  {
     file: 'holiday-family-nusadua.jpg',
     title: 'Nusa Dua, Bali',
     author: 'GdML',
