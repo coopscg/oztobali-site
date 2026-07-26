@@ -22,6 +22,7 @@ export const navItems: NavItem[] = [
     label: 'Holidays',
     children: [
       { label: 'All Holiday Guides', to: '/holidays', description: 'Find the right trip for you' },
+      { label: 'New Traveller Checklist', to: '/travel-checklist', description: 'Visas, vaccinations & duty-free' },
       { label: 'Family', to: '/holidays/family' },
       { label: 'Adventure', to: '/holidays/adventure' },
       { label: 'Partying', to: '/holidays/party' },

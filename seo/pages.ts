@@ -130,6 +130,15 @@ export function holidayCategorySEO(cat: HolidayCategoryInfo): SEOInput {
   };
 }
 
+export function travelChecklistSEO(): SEOInput {
+  return {
+    title: 'New Traveller Checklist: Visas, Vaccinations & Duty-Free | OztoBali',
+    description:
+      'Everything a first-time Australian traveller needs before flying to Bali: e-VOA visa, vaccinations, the Bali tourist levy, and duty-free rules both directions.',
+    path: '/travel-checklist',
+  };
+}
+
 export function partnerSEO(): SEOInput {
   return {
     title: 'Partner With OztoBali | Advertise to Australians Moving to Bali',
@@ -238,6 +247,7 @@ export function getAllRoutes(): string[] {
     '/contact',
     '/credits',
     '/partner',
+    '/travel-checklist',
   ];
 }
 
@@ -254,6 +264,7 @@ export function getSEOForRoute(path: string): SEOInput {
   if (path === '/contact') return contactSEO();
   if (path === '/credits') return creditsSEO();
   if (path === '/partner') return partnerSEO();
+  if (path === '/travel-checklist') return travelChecklistSEO();
   if (path === '/blog') return blogIndexSEO();
   if (path.startsWith('/holidays/')) {
     const slug = path.replace('/holidays/', '');
