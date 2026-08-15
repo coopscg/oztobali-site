@@ -52,7 +52,9 @@ const Footer: React.FC = () => {
           <p>
             © {new Date().getFullYear()} OztoBali. All rights reserved. ·{' '}
             <Link to="/credits" className="hover:text-[#8FA69E] transition-colors underline">Photo credits</Link> ·{' '}
-            <Link to="/partner" className="hover:text-[#8FA69E] transition-colors underline">Partner with us</Link>
+            <Link to="/partner" className="hover:text-[#8FA69E] transition-colors underline">Partner with us</Link> ·{' '}
+            <a href="/rss.xml" className="hover:text-[#8FA69E] transition-colors underline">RSS</a> ·{' '}
+            <Link to="/privacy" className="hover:text-[#8FA69E] transition-colors underline">Privacy</Link>
           </p>
         </div>
       </div>

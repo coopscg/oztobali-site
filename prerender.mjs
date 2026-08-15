@@ -11,7 +11,7 @@ if (!ssrEntryFile) {
   throw new Error(`No SSR entry bundle found in ${ssrDir}`);
 }
 
-const { render, getAllRoutes, getSEOForRoute, buildSEOTags } = await import(
+const { render, getAllRoutes, getSEOForRoute, buildSEOTags, SITE_URL, SITE_NAME, blogPosts } = await import(
   pathToFileURL(path.join(ssrDir, ssrEntryFile)).href
 );
 
@@ -74,7 +74,6 @@ for (const route of routes) {
 }
 
 // Regenerate sitemap.xml from the same route list (single source of truth)
-const SITE_URL = 'https://oztobali.com';
 const sitemapEntries = routes
   .map((route) => {
     const priority = route === '/' ? '1.0' : route.startsWith('/blog/') ? '0.6' : '0.8';
@@ -85,6 +84,27 @@ const sitemapEntries = routes
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`;
 fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
 console.log('Regenerated sitemap.xml with', routes.length, 'routes');
+
+// Generate rss.xml from the blog posts, newest first
+function escapeXml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+const rssItems = sortedPosts
+  .map((post) => {
+    const url = `${SITE_URL}/blog/${post.slug}`;
+    const pubDate = new Date(post.date).toUTCString();
+    return `    <item>\n      <title>${escapeXml(post.title)}</title>\n      <link>${url}</link>\n      <guid>${url}</guid>\n      <description>${escapeXml(post.description)}</description>\n      <pubDate>${pubDate}</pubDate>\n      <category>${escapeXml(post.category)}</category>\n    </item>`;
+  })
+  .join('\n');
+const rss = `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n  <channel>\n    <title>${escapeXml(SITE_NAME)} Blog</title>\n    <link>${SITE_URL}/blog</link>\n    <description>Practical, sourced guides for Australians moving to, living in, and holidaying in Bali.</description>\n    <language>en-AU</language>\n${rssItems}\n  </channel>\n</rss>\n`;
+fs.writeFileSync(path.join(distDir, 'rss.xml'), rss);
+console.log('Generated rss.xml with', sortedPosts.length, 'posts');
 
 // Clean up the SSR-only build output
 fs.rmSync(ssrDir, { recursive: true, force: true });

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle2, Mail } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
@@ -91,6 +92,10 @@ const Contact: React.FC = () => {
             <Mail className="w-4 h-4" />
             Prefer email? <a href="mailto:hello@oztobali.com" className="text-[#E3A857] hover:text-[#F6EFE4] transition-colors">hello@oztobali.com</a>
           </div>
+          <p className="text-center text-xs text-[#5E7871] mt-4">
+            By submitting this form you agree to our{' '}
+            <Link to="/privacy" className="underline hover:text-[#8FA69E] transition-colors">privacy policy</Link>.
+          </p>
         </div>
       </section>
     </>

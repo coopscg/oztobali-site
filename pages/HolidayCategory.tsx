@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, MapPin } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import CTASection from '../components/CTASection';
+import AffiliateLinks from '../components/AffiliateLinks';
 import { useSEO } from '../hooks/useSEO';
 import { holidayCategorySEO } from '../seo/pages';
 import { holidayCategories } from '../data/holidayPlaces';
@@ -63,6 +64,8 @@ const HolidayCategory: React.FC = () => {
               ))}
             </ul>
           </div>
+
+          <AffiliateLinks categories={['accommodation', 'activities']} title="Book it" />
 
           <div className="mt-10">
             <Link to="/holidays" className="text-sm font-semibold text-[#E3A857] hover:text-[#F6EFE4] transition-colors">

@@ -17,6 +17,7 @@ import BlogPost from './pages/BlogPost';
 import Credits from './pages/Credits';
 import Partner from './pages/Partner';
 import TravelChecklist from './pages/TravelChecklist';
+import Privacy from './pages/Privacy';
 
 const App: React.FC = () => {
   return (
@@ -38,6 +39,7 @@ const App: React.FC = () => {
         <Route path="/credits" element={<Credits />} />
         <Route path="/partner" element={<Partner />} />
         <Route path="/travel-checklist" element={<TravelChecklist />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Route>
     </Routes>
   );

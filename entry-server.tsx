@@ -14,4 +14,5 @@ export function render(url: string): string {
 }
 
 export { getAllRoutes, getSEOForRoute } from './seo/pages';
-export { buildSEOTags } from './seo/tags';
+export { buildSEOTags, SITE_URL, SITE_NAME } from './seo/tags';
+export { blogPosts } from './data/blogPosts';

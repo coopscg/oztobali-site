@@ -4,6 +4,7 @@ import Disclaimer from '../components/Disclaimer';
 import SourceList from '../components/SourceList';
 import CTASection from '../components/CTASection';
 import TaxSections from '../components/TaxSections';
+import AffiliateLinks from '../components/AffiliateLinks';
 import { useSEO } from '../hooks/useSEO';
 import { travelChecklistSEO } from '../seo/pages';
 import { checklistSections, LAST_VERIFIED_CHECKLIST } from '../data/travelChecklist';
@@ -34,6 +35,8 @@ const TravelChecklist: React.FC = () => {
       <section className="px-6 py-8">
         <div className="container mx-auto max-w-4xl">
           <TaxSections sections={checklistSections} />
+
+          <AffiliateLinks categories={['money', 'connectivity', 'insurance']} title="Sort this before you fly" />
 
           <SourceList
             sources={[

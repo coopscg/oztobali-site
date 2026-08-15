@@ -130,6 +130,14 @@ export function holidayCategorySEO(cat: HolidayCategoryInfo): SEOInput {
   };
 }
 
+export function privacySEO(): SEOInput {
+  return {
+    title: 'Privacy Policy | OztoBali',
+    description: 'What OztoBali collects, why, and what happens to it.',
+    path: '/privacy',
+  };
+}
+
 export function travelChecklistSEO(): SEOInput {
   return {
     title: 'New Traveller Checklist: Visas, Vaccinations & Duty-Free | OztoBali',
@@ -248,6 +256,7 @@ export function getAllRoutes(): string[] {
     '/credits',
     '/partner',
     '/travel-checklist',
+    '/privacy',
   ];
 }
 
@@ -265,6 +274,7 @@ export function getSEOForRoute(path: string): SEOInput {
   if (path === '/credits') return creditsSEO();
   if (path === '/partner') return partnerSEO();
   if (path === '/travel-checklist') return travelChecklistSEO();
+  if (path === '/privacy') return privacySEO();
   if (path === '/blog') return blogIndexSEO();
   if (path.startsWith('/holidays/')) {
     const slug = path.replace('/holidays/', '');
