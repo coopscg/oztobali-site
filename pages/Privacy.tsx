@@ -34,10 +34,10 @@ const Privacy: React.FC = () => {
           <div>
             <h2 className="text-xl font-bold text-[#F6EFE4] mb-3">How the contact form works</h2>
             <p>
-              Our contact form is processed by Formspree, a third-party form service, which delivers your submission
-              to us by email. Formspree is based in the United States and stores submitted data on its own servers
-              under its own privacy policy. We don't control Formspree's infrastructure, only what we do with the
-              enquiry once we receive it.
+              When you submit our contact form, your details are sent by email to us and you automatically receive a
+              confirmation email in reply, both handled through Resend, a transactional email service. Resend
+              processes the email delivery on our behalf under its own privacy policy, but does not otherwise use
+              your data.
             </p>
           </div>
 
@@ -64,7 +64,7 @@ const Privacy: React.FC = () => {
             <h2 className="text-xl font-bold text-[#F6EFE4] mb-3">Your rights</h2>
             <p>
               You can ask us what data we hold about you, ask us to correct it, or ask us to delete it, at any time.
-              Email hello@oztobali.com and we'll action it. If you're in Australia, this is consistent with the
+              Email oztobali1@gmail.com and we'll action it. If you're in Australia, this is consistent with the
               Australian Privacy Principles under the Privacy Act 1988.
             </p>
           </div>
@@ -89,7 +89,7 @@ const Privacy: React.FC = () => {
           <div>
             <h2 className="text-xl font-bold text-[#F6EFE4] mb-3">Contact</h2>
             <p>
-              Questions about this policy or your data: hello@oztobali.com.
+              Questions about this policy or your data: oztobali1@gmail.com.
             </p>
           </div>
         </div>
