@@ -5,6 +5,7 @@ import PageHero from '../components/PageHero';
 import Disclaimer from '../components/Disclaimer';
 import SourceList from '../components/SourceList';
 import CTASection from '../components/CTASection';
+import AffiliateLinks from '../components/AffiliateLinks';
 import { useSEO } from '../hooks/useSEO';
 import { visasResidencySEO } from '../seo/pages';
 import { visaOptions, regulatoryFlags, LAST_VERIFIED } from '../data/visas';
@@ -99,6 +100,8 @@ const VisasResidency: React.FC = () => {
               </div>
             ))}
           </div>
+
+          <AffiliateLinks categories={['legal']} title="Get help with the paperwork" />
 
           <SourceList
             sources={[

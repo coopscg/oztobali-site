@@ -4,10 +4,34 @@ export interface AffiliateLink {
   // TODO: replace with your real affiliate tracking link once approved for each program.
   // These are plain, non-tracking links for now, not yet earning commission.
   url: string;
-  category: 'accommodation' | 'activities' | 'money' | 'connectivity' | 'insurance';
+  category: 'accommodation' | 'activities' | 'money' | 'connectivity' | 'insurance' | 'property' | 'legal';
 }
 
 export const affiliateLinks: AffiliateLink[] = [
+  {
+    name: 'New Life Bali',
+    description: 'AREBI-certified real estate agency, buying, selling and leasing across Bali',
+    url: 'https://newlifebali.com/',
+    category: 'property',
+  },
+  {
+    name: 'Legal Indonesia',
+    description: 'PT PMA company setup, KITAS applications and legal structuring for foreigners',
+    url: 'https://legalindonesia.id/',
+    category: 'legal',
+  },
+  {
+    name: 'OFX',
+    description: 'Large international transfers, strong rates once you move above a few thousand dollars',
+    url: 'https://www.ofx.com/en-au/',
+    category: 'money',
+  },
+  {
+    name: 'Revolut',
+    description: 'Multi-currency card and account, useful for everyday spending in IDR',
+    url: 'https://www.revolut.com/',
+    category: 'money',
+  },
   {
     name: 'Booking.com',
     description: 'Hotels and villas, free cancellation on most listings',

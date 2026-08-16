@@ -4,6 +4,7 @@ import Disclaimer from '../components/Disclaimer';
 import SourceList from '../components/SourceList';
 import CTASection from '../components/CTASection';
 import TaxSections from '../components/TaxSections';
+import AffiliateLinks from '../components/AffiliateLinks';
 import { useSEO } from '../hooks/useSEO';
 import { propertyBuyingSEO } from '../seo/pages';
 import { buyingSections, LAST_VERIFIED_BUY } from '../data/propertyBuying';
@@ -34,6 +35,8 @@ const PropertyBuying: React.FC = () => {
       <section className="px-6 py-8">
         <div className="container mx-auto max-w-4xl">
           <TaxSections sections={buyingSections} />
+
+          <AffiliateLinks categories={['property', 'legal']} title="Who to actually talk to" />
 
           <SourceList
             sources={[
