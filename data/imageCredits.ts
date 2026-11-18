@@ -64,6 +64,13 @@ export const imageCredits: ImageCredit[] = [
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Canang_sari_1.jpg',
   },
   {
+    file: 'culture-ceremony-bratan.jpg',
+    title: 'A ceremony at a padmasana in Pura Ulun Danu Bratan',
+    author: 'Chainwit.',
+    license: 'CC BY-SA 4.0',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:A_ceremony_at_a_padmasana_in_Pura_Ulun_Danu_Bratan.jpg',
+  },
+  {
     file: 'property-villa-pool.jpg',
     title: 'We Are Surrounded',
     author: 'Bali Real Estate',
@@ -97,6 +104,13 @@ export const imageCredits: ImageCredit[] = [
     author: 'Becky Stern',
     license: 'CC BY-SA 2.0',
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Satay_in_Bali.jpg',
+  },
+  {
+    file: 'goldcoast-skyline.jpg',
+    title: 'Gold Coast skyline',
+    author: 'Jordan Gellie',
+    license: 'CC0 (public domain)',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Gold_Coast_skyline_(Unsplash).jpg',
   },
   {
     file: 'canggu-beach.jpg',

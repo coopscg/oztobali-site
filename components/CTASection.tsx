@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { fadeUp } from '../lib/motion';
+import MagneticButton from './MagneticButton';
 
 interface CTASectionProps {
   title: string;
@@ -16,17 +19,23 @@ const CTASection: React.FC<CTASectionProps> = ({
   ctaTo = '/contact',
 }) => {
   return (
-    <section className="px-6 py-20">
-      <div className="container mx-auto max-w-4xl bg-gradient-to-br from-[#0B4F4A] to-[#062420] border border-[#E3A857]/15 rounded-[32px] p-10 md:p-14 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#F6EFE4] mb-4">{title}</h2>
-        <p className="text-[#B9CFC9] text-lg font-light max-w-2xl mx-auto mb-8">{subtitle}</p>
-        <Link
-          to={ctaTo}
-          className="inline-flex items-center gap-2 px-8 py-4 bg-[#E3A857] text-[#062420] font-bold rounded-full hover:bg-[#F6EFE4] transition-all transform active:scale-95"
-        >
-          {ctaLabel} <ArrowRight className="w-5 h-5" />
-        </Link>
-      </div>
+    <section className="px-6 py-24">
+      <motion.div
+        {...fadeUp}
+        className="container mx-auto max-w-4xl relative overflow-hidden bg-gradient-to-br from-teal to-ink border border-gold/15 rounded-[32px] p-10 md:p-16 text-center"
+      >
+        <div className="absolute top-[-30%] right-[-10%] w-[400px] h-[400px] bg-gold/10 rounded-full blur-[120px] pointer-events-none" />
+        <h2 className="relative font-display text-3xl md:text-5xl font-bold text-cream mb-4">{title}</h2>
+        <p className="relative text-sage text-lg font-light max-w-2xl mx-auto mb-9">{subtitle}</p>
+        <MagneticButton className="relative">
+          <Link
+            to={ctaTo}
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-gold text-ink font-bold rounded-full hover:bg-cream transition-colors duration-300"
+          >
+            {ctaLabel} <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </MagneticButton>
+      </motion.div>
     </section>
   );
 };

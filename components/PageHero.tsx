@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { easePremium } from '../lib/motion';
 
 interface PageHeroProps {
   eyebrow: string;
@@ -12,35 +13,39 @@ interface PageHeroProps {
 const PageHero: React.FC<PageHeroProps> = ({ eyebrow, title, subtitle, image, imageAlt }) => {
   if (image) {
     return (
-      <section className="relative px-6 pt-44 pb-24 overflow-hidden min-h-[440px] flex items-end">
-        <img
+      <section className="relative px-6 pt-44 pb-24 overflow-hidden min-h-[480px] flex items-end">
+        <motion.img
           src={image}
           alt={imageAlt ?? ''}
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
+          initial={{ scale: 1.12 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 4, ease: easePremium }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#062420] via-[#062420]/80 to-[#062420]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/20" />
         <div className="container mx-auto max-w-4xl relative z-10 text-center pt-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block text-[#E3A857] font-bold tracking-widest uppercase mb-4 text-sm"
+            transition={{ ease: easePremium }}
+            className="inline-block text-gold font-bold tracking-widest uppercase mb-4 text-sm"
           >
             {eyebrow}
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold tracking-tight text-[#F6EFE4] mb-6 leading-[1.05]"
+            transition={{ delay: 0.1, ease: easePremium }}
+            className="font-display text-4xl md:text-6xl font-bold tracking-tight text-cream mb-6 leading-[1.05]"
           >
             {title}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-[#E8D9C8] text-lg md:text-xl font-light max-w-2xl mx-auto"
+            transition={{ delay: 0.2, ease: easePremium }}
+            className="text-cream-dim text-lg md:text-xl font-light max-w-2xl mx-auto"
           >
             {subtitle}
           </motion.p>
@@ -51,28 +56,29 @@ const PageHero: React.FC<PageHeroProps> = ({ eyebrow, title, subtitle, image, im
 
   return (
     <section className="relative px-6 pt-40 pb-20 overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[#E3A857]/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gold/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="container mx-auto max-w-4xl relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-block text-[#E3A857] font-bold tracking-widest uppercase mb-4 text-sm"
+          transition={{ ease: easePremium }}
+          className="inline-block text-gold font-bold tracking-widest uppercase mb-4 text-sm"
         >
           {eyebrow}
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="text-4xl md:text-6xl font-bold tracking-tight text-[#F6EFE4] mb-6 leading-[1.05]"
+          transition={{ delay: 0.1, ease: easePremium }}
+          className="font-display text-4xl md:text-6xl font-bold tracking-tight text-cream mb-6 leading-[1.05]"
         >
           {title}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-[#B9CFC9] text-lg md:text-xl font-light max-w-2xl mx-auto"
+          transition={{ delay: 0.2, ease: easePremium }}
+          className="text-sage text-lg md:text-xl font-light max-w-2xl mx-auto"
         >
           {subtitle}
         </motion.p>
