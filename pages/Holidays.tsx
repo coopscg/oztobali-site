@@ -16,7 +16,7 @@ const Holidays: React.FC = () => {
       <PageHero
         eyebrow="Holidays"
         title="Find Your Kind of Bali Holiday"
-        subtitle="Bali isn't one holiday — it's five. Pick the vibe you're after and we'll point you to the right areas."
+        subtitle="Bali isn't one holiday: it's five. Pick the vibe you're after and we'll point you to the right areas."
       />
 
       <section className="px-6 py-8 pb-24">

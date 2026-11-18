@@ -15,7 +15,7 @@ const Privacy: React.FC = () => {
       />
       <section className="px-6 pb-24">
         <div className="container mx-auto max-w-3xl space-y-8 text-[#B9CFC9] leading-relaxed">
-          <p className="text-sm text-[#8FA69E]">Last updated 15 August 2026.</p>
+          <p className="text-sm text-[#8FA69E]">Last updated 18 November 2026.</p>
 
           <div>
             <h2 className="text-xl font-bold text-[#F6EFE4] mb-3">What we collect</h2>
@@ -70,10 +70,29 @@ const Privacy: React.FC = () => {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-[#F6EFE4] mb-3">Cookies</h2>
+            <h2 className="text-xl font-bold text-[#F6EFE4] mb-3">Cookies and advertising</h2>
             <p>
-              We use minimal, standard analytics that may set basic cookies to measure aggregate site usage. We don't
-              use tracking cookies for advertising retargeting.
+              We use standard analytics that may set basic cookies to measure aggregate site usage.
+            </p>
+            <p className="mt-3">
+              To keep OztoBali free, we may show ads served by Google AdSense. Third-party vendors, including Google,
+              use cookies to serve ads based on your previous visits to this website and other websites. Google's use
+              of advertising cookies enables it and its partners to serve ads to you based on your visits to this
+              site and/or other sites on the internet. You can opt out of personalised advertising by visiting{' '}
+              <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-[#E3A857] underline">Google Ads Settings</a>,
+              and learn more about how Google uses data at{' '}
+              <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-[#E3A857] underline">How Google uses information from sites that use its services</a>.
+              You can also opt out of some third-party vendors' use of cookies for personalised advertising at{' '}
+              <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-[#E3A857] underline">aboutads.info</a>.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-[#F6EFE4] mb-3">Affiliate links</h2>
+            <p>
+              Some links to booking, travel and money services are affiliate links. If you book or sign up through
+              one, we may earn a commission at no extra cost to you. Those services may set their own cookies to
+              track the referral, under their own privacy policies. Affiliate relationships never decide what we
+              write or recommend.
             </p>
           </div>
 

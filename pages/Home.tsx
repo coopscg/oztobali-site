@@ -19,8 +19,10 @@ const Home: React.FC = () => {
       <HubGrid />
       <FAQAccordion />
       <CTASection
-        title="Ready to start planning your move?"
-        subtitle="Tell us where you're at (just researching, mid-move, or already there) and we'll point you to what matters most right now."
+        title="Heading to Bali soon?"
+        subtitle="Start with our free checklist: visa, tourist levy, arrival card, duty free and the scams to avoid, in the order you need them."
+        ctaLabel="Open the Bali checklist"
+        ctaTo="/travel-checklist"
       />
     </>
   );

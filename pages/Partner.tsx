@@ -57,14 +57,14 @@ const Partner: React.FC = () => {
           </div>
 
           <p className="text-center text-sm text-[#8FA69E] mt-10">
-            All placements are clearly labeled as sponsored — we don't compromise reader trust for anyone.
+            All placements are clearly labeled as sponsored: we don't compromise reader trust for anyone.
           </p>
         </div>
       </section>
 
       <CTASection
         title="Let's talk about your business"
-        subtitle="Tell us what you do and who you want to reach — we'll suggest the right placement."
+        subtitle="Tell us what you do and who you want to reach: we'll suggest the right placement."
         ctaLabel="Get in touch"
       />
     </>

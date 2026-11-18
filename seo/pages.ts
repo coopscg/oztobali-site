@@ -26,7 +26,7 @@ export function visasResidencySEO(): SEOInput {
   return {
     title: 'Bali Visas & Residency Costs for Australians | OztoBali',
     description:
-      'KITAS, KITAP, Second Home Visa, and every other visa pathway Australians use to holiday, work remotely, retire, or invest in Bali — with real 2026 costs and sources.',
+      'KITAS, KITAP, Second Home Visa, and every other visa pathway Australians use to holiday, work remotely, retire, or invest in Bali, with real 2026 costs and sources.',
     path: '/visas-residency',
     jsonLd: {
       '@context': 'https://schema.org',
@@ -61,7 +61,7 @@ export function propertyRentingSEO(): SEOInput {
   return {
     title: 'Renting in Bali: Lease Rules, Deposits & Best Areas | OztoBali',
     description:
-      'How Bali leases actually work, what protects you as a tenant, and where Australians rent — Canggu, Seminyak, Ubud, Uluwatu and Sanur compared.',
+      'How Bali leases actually work, what protects you as a tenant, and where Australians rent: Canggu, Seminyak, Ubud, Uluwatu and Sanur compared.',
     path: '/property/renting',
   };
 }
@@ -70,16 +70,16 @@ export function propertyBuyingSEO(): SEOInput {
   return {
     title: 'Buying Property in Bali: Hak Pakai, Leasehold & the Nominee Trap | OztoBali',
     description:
-      'What Australians can legally own in Bali — Hak Pakai, leasehold, and PT PMA structures — and why nominee arrangements are now a criminal offence.',
+      'What Australians can legally own in Bali, Hak Pakai, leasehold, and PT PMA structures, and why nominee arrangements are now a criminal offence.',
     path: '/property/buying',
   };
 }
 
 export function propertyDevelopersSEO(): SEOInput {
   return {
-    title: 'Trusted Bali Property Developers With a Track Record | OztoBali',
+    title: 'Established Bali Property Developers With a Track Record | OztoBali',
     description:
-      'Established Bali developers and builders with genuinely delivered projects — from luxury villa groups to large-scale resort developers.',
+      'Established Bali developers and builders with genuinely delivered projects, from luxury villa groups to large-scale resort developers.',
     path: '/property/developers',
     jsonLd: {
       '@context': 'https://schema.org',
@@ -107,7 +107,7 @@ export function holidaysSEO(): SEOInput {
   return {
     title: 'Bali Holiday Guides: Family, Adventure, Party, Shopping & Culture | OztoBali',
     description:
-      'Find the right kind of Bali holiday — family-friendly, adventure, nightlife, shopping, or cultural — with areas, prices and practical tips for each.',
+      'Find the right kind of Bali holiday, family-friendly, adventure, nightlife, shopping, or cultural, with areas, prices and practical tips for each.',
     path: '/holidays',
     jsonLd: {
       '@context': 'https://schema.org',
@@ -127,6 +127,14 @@ export function holidayCategorySEO(cat: HolidayCategoryInfo): SEOInput {
     title: `${cat.label} in Bali: Where to Go & What to Know | OztoBali`,
     description: cat.intro,
     path: `/holidays/${cat.slug}`,
+  };
+}
+
+export function aboutSEO(): SEOInput {
+  return {
+    title: 'About OztoBali: A Free Bali Guide for Australians',
+    description: 'Who OztoBali is for, how we research and source every fact, and how the site is funded.',
+    path: '/about',
   };
 }
 
@@ -257,6 +265,7 @@ export function getAllRoutes(): string[] {
     '/partner',
     '/travel-checklist',
     '/privacy',
+    '/about',
   ];
 }
 
@@ -275,6 +284,7 @@ export function getSEOForRoute(path: string): SEOInput {
   if (path === '/partner') return partnerSEO();
   if (path === '/travel-checklist') return travelChecklistSEO();
   if (path === '/privacy') return privacySEO();
+  if (path === '/about') return aboutSEO();
   if (path === '/blog') return blogIndexSEO();
   if (path.startsWith('/holidays/')) {
     const slug = path.replace('/holidays/', '');

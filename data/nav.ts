@@ -14,7 +14,7 @@ export const navItems: NavItem[] = [
     children: [
       { label: 'Renting in Bali', to: '/property/renting', description: 'Leases, deposits & popular areas' },
       { label: 'Buying in Bali', to: '/property/buying', description: 'Hak Pakai, leasehold & nominee risk' },
-      { label: 'Trusted Developers', to: '/property/developers', description: 'Established builders with a track record' },
+      { label: 'Established Developers', to: '/property/developers', description: 'Established builders with a track record' },
     ],
   },
   { label: 'Culture', to: '/culture' },

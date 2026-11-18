@@ -14,9 +14,9 @@ const PropertyDevelopers: React.FC = () => {
   return (
     <>
       <PageHero
-        eyebrow="Property — Developers"
+        eyebrow="Property: Developers"
         title="Bali Developers With a Real Track Record"
-        subtitle="Established builders who have actually delivered completed projects — not just marketing renders."
+        subtitle="Established builders who have actually delivered completed projects, not just marketing renders."
       />
 
       <section className="px-6 pb-8">
@@ -67,7 +67,7 @@ const PropertyDevelopers: React.FC = () => {
 
       <CTASection
         title="Considering a specific developer or project?"
-        subtitle="We can't vouch for any individual sale — but we can help you know what questions and due diligence to insist on first."
+        subtitle="We can't vouch for any individual sale, but we can help you know what questions and due diligence to insist on first."
       />
     </>
   );

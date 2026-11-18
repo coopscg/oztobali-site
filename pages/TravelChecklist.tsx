@@ -41,14 +41,14 @@ const TravelChecklist: React.FC = () => {
           <SourceList
             sources={[
               { label: 'Official eVisa Indonesia', url: 'https://evisa.imigrasi.go.id' },
-              { label: 'All Indonesia — unified arrival card', url: 'https://allindonesia.imigrasi.go.id' },
-              { label: 'Australian Immunisation Handbook — travel recommendations', url: 'https://immunisationhandbook.health.gov.au' },
-              { label: 'Smartraveller — Indonesia travel advice', url: 'https://www.smartraveller.gov.au/destinations/asia/indonesia' },
-              { label: 'Smartraveller — travel insurance', url: 'https://www.smartraveller.gov.au/before-you-go/the-basics/travel-insurance' },
-              { label: 'Bali tourist levy — official portal', url: 'https://lovebali.baliprov.go.id' },
+              { label: 'All Indonesia: unified arrival card', url: 'https://allindonesia.imigrasi.go.id' },
+              { label: 'Australian Immunisation Handbook: travel recommendations', url: 'https://immunisationhandbook.health.gov.au' },
+              { label: 'Smartraveller: Indonesia travel advice', url: 'https://www.smartraveller.gov.au/destinations/asia/indonesia' },
+              { label: 'Smartraveller: travel insurance', url: 'https://www.smartraveller.gov.au/before-you-go/the-basics/travel-insurance' },
+              { label: 'Bali tourist levy: official portal', url: 'https://lovebali.baliprov.go.id' },
               { label: 'Indonesian Directorate General of Customs and Excise', url: 'https://www.beacukai.go.id' },
-              { label: 'Australian Border Force — duty free', url: 'https://www.abf.gov.au/entering-and-leaving-australia/duty-free' },
-              { label: 'AUSTRAC — moving money overseas', url: 'https://www.austrac.gov.au/general-public/moving-money-overseas' },
+              { label: 'Australian Border Force: duty free', url: 'https://www.abf.gov.au/entering-and-leaving-australia/duty-free' },
+              { label: 'AUSTRAC: moving money overseas', url: 'https://www.austrac.gov.au/general-public/moving-money-overseas' },
             ]}
           />
         </div>

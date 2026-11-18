@@ -14,7 +14,7 @@ const TaxIndonesia: React.FC = () => {
   return (
     <>
       <PageHero
-        eyebrow="Taxation — Indonesia"
+        eyebrow="Taxation: Indonesia"
         title="Indonesian Tax Rules for Australians"
         subtitle={`NPWP registration, tax residency, current rates, and the "foreign income exemption" claims worth double-checking. Last verified ${LAST_VERIFIED_ID}.`}
       />
@@ -35,15 +35,15 @@ const TaxIndonesia: React.FC = () => {
 
           <SourceList
             sources={[
-              { label: 'PwC Indonesia — Individual Residence', url: 'https://taxsummaries.pwc.com/indonesia/individual/residence' },
-              { label: 'Direktorat Jenderal Pajak — Tax Return Reporting for Foreign Citizens', url: 'https://www.pajak.go.id/en/artikel/tax-return-reporting-foreign-citizens-indonesia' },
-              { label: 'Emerhub — Indonesian Tax for Expats (4-Year Exemption & DTA)', url: 'https://emerhub.com/indonesia/indonesian-tax-for-expats-4-year-exemption-and-dta/' },
-              { label: 'TBrights — NPWP and KITAS relationship', url: 'https://tbrights.com/the-relation-of-tax-identification-number-npwp-and-limited-stay-permit-card-kitas/' },
-              { label: 'PwC Indonesia — Personal Income Tax rates', url: 'https://taxsummaries.pwc.com/indonesia/individual/taxes-on-personal-income' },
-              { label: 'Indonesia Business Post — Government rules out new tax amnesty', url: 'https://indonesiabusinesspost.com/6626/policy/indonesia-rules-out-new-tax-amnesty-as-government-shifts-focus-to-long-term-tax-compliance' },
-              { label: 'MUC — Six-month asset repatriation window', url: 'https://muc.co.id/en/article/purbaya-grants-six-month-window-for-tax-asset-repatriation' },
-              { label: 'MUC — Tax Amnesty Volume III drafting status', url: 'https://muc.co.id/en/article/revealed-government-drafting-plans-for-tax-amnesty-vol-iii' },
-              { label: 'Australia–Indonesia Double Tax Agreement — full text (AustLII)', url: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/1992/40.html' },
+              { label: 'PwC Indonesia: Individual Residence', url: 'https://taxsummaries.pwc.com/indonesia/individual/residence' },
+              { label: 'Direktorat Jenderal Pajak: Tax Return Reporting for Foreign Citizens', url: 'https://www.pajak.go.id/en/artikel/tax-return-reporting-foreign-citizens-indonesia' },
+              { label: 'Emerhub: Indonesian Tax for Expats (4-Year Exemption & DTA)', url: 'https://emerhub.com/indonesia/indonesian-tax-for-expats-4-year-exemption-and-dta/' },
+              { label: 'TBrights: NPWP and KITAS relationship', url: 'https://tbrights.com/the-relation-of-tax-identification-number-npwp-and-limited-stay-permit-card-kitas/' },
+              { label: 'PwC Indonesia: Personal Income Tax rates', url: 'https://taxsummaries.pwc.com/indonesia/individual/taxes-on-personal-income' },
+              { label: 'Indonesia Business Post: Government rules out new tax amnesty', url: 'https://indonesiabusinesspost.com/6626/policy/indonesia-rules-out-new-tax-amnesty-as-government-shifts-focus-to-long-term-tax-compliance' },
+              { label: 'MUC: Six-month asset repatriation window', url: 'https://muc.co.id/en/article/purbaya-grants-six-month-window-for-tax-asset-repatriation' },
+              { label: 'MUC: Tax Amnesty Volume III drafting status', url: 'https://muc.co.id/en/article/revealed-government-drafting-plans-for-tax-amnesty-vol-iii' },
+              { label: 'Australia–Indonesia Double Tax Agreement: full text (AustLII)', url: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/other/dfat/treaties/1992/40.html' },
             ]}
           />
         </div>

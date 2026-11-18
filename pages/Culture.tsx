@@ -15,7 +15,7 @@ const Culture: React.FC = () => {
       <PageHero
         eyebrow="Culture"
         title="Bali Culture & Way of Life"
-        subtitle="What Australians need to understand and respect — from daily offerings to the island-wide Day of Silence."
+        subtitle="What Australians need to understand and respect, from daily offerings to the island-wide Day of Silence."
         image="/images/culture-canang-sari.jpg"
         imageAlt="A canang sari offering, placed daily outside Balinese homes and businesses"
       />
@@ -26,16 +26,16 @@ const Culture: React.FC = () => {
 
           <SourceList
             sources={[
-              { label: 'Wikipedia — Nyepi', url: 'https://en.wikipedia.org/wiki/Nyepi' },
-              { label: 'PublicHolidays.co.id — Bali Hindu New Year', url: 'https://publicholidays.co.id/bali-hindu-new-year/' },
-              { label: 'UNESCO — Subak System, Bali Cultural Landscape', url: 'https://whc.unesco.org/en/list/1194/' },
+              { label: 'Wikipedia: Nyepi', url: 'https://en.wikipedia.org/wiki/Nyepi' },
+              { label: 'PublicHolidays.co.id: Bali Hindu New Year', url: 'https://publicholidays.co.id/bali-hindu-new-year/' },
+              { label: 'UNESCO: Subak System, Bali Cultural Landscape', url: 'https://whc.unesco.org/en/list/1194/' },
             ]}
           />
         </div>
       </section>
 
       <CTASection
-        title="Culture shock is real — plan for it"
+        title="Culture shock is real: plan for it"
         subtitle="Whether you're visiting for two weeks or moving for good, understanding local custom up front makes everything else easier."
         ctaLabel="Get our settling-in checklist"
       />

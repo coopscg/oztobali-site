@@ -12,7 +12,7 @@ const hubs = [
   { icon: Receipt, title: 'Indonesian Tax', desc: 'NPWP, tax residency, and rates once you’re there.', to: '/taxation/indonesia', image: '/images/canggu-beach.jpg' },
   { icon: KeyRound, title: 'Renting in Bali', desc: 'Lease norms, deposits, and where expats actually live.', to: '/property/renting', image: '/images/property-villa-pool.jpg' },
   { icon: Building2, title: 'Buying in Bali', desc: 'Hak Pakai, leasehold, PT PMA, and the nominee trap.', to: '/property/buying', image: '/images/property-ricefield-land.jpg' },
-  { icon: Users, title: 'Trusted Developers', desc: 'Builders with a real, delivered track record.', to: '/property/developers', image: '/images/holiday-cultural-uluwatu.jpg' },
+  { icon: Users, title: 'Established Developers', desc: 'Builders with a real, delivered track record.', to: '/property/developers', image: '/images/holiday-cultural-uluwatu.jpg' },
   { icon: Sparkles, title: 'Bali Culture', desc: 'Ceremony, custom, and what respect looks like day to day.', to: '/culture', image: '/images/culture-canang-sari.jpg' },
   { icon: Palmtree, title: 'Holiday Guides', desc: 'Family, adventure, party, shopping, cultural, sorted by vibe.', to: '/holidays', image: '/images/holiday-family-nusadua.jpg' },
 ];

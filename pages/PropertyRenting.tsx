@@ -14,7 +14,7 @@ const PropertyRenting: React.FC = () => {
   return (
     <>
       <PageHero
-        eyebrow="Property — Renting"
+        eyebrow="Property: Renting"
         title="Renting in Bali, Done Properly"
         subtitle={`Lease norms, deposits, and what actually protects you as a tenant. Last verified ${LAST_VERIFIED_RENT}.`}
         image="/images/property-villa-pool.jpg"
@@ -36,10 +36,10 @@ const PropertyRenting: React.FC = () => {
 
           <SourceList
             sources={[
-              { label: 'Rumah123 — Lease Agreements in Indonesia for Expatriates', url: 'https://www.rumah123.com/en/property-guide/lease-agreements-in-indonesia-for-expatriates/' },
-              { label: 'Cekindo — Renting a Property in Bali', url: 'https://www.cekindo.com/blog/renting-property-bali-agreement' },
-              { label: 'BVR Property — Tenant Rights and Responsibilities in Indonesia', url: 'https://bvrproperty.com/blogpost/tenant-rights-and-responsibilities' },
-              { label: 'Bali Home Immo — Villas for Rent', url: 'https://bali-home-immo.com/realestate-property/for-rent/villa' },
+              { label: 'Rumah123: Lease Agreements in Indonesia for Expatriates', url: 'https://www.rumah123.com/en/property-guide/lease-agreements-in-indonesia-for-expatriates/' },
+              { label: 'Cekindo: Renting a Property in Bali', url: 'https://www.cekindo.com/blog/renting-property-bali-agreement' },
+              { label: 'BVR Property: Tenant Rights and Responsibilities in Indonesia', url: 'https://bvrproperty.com/blogpost/tenant-rights-and-responsibilities' },
+              { label: 'Bali Home Immo: Villas for Rent', url: 'https://bali-home-immo.com/realestate-property/for-rent/villa' },
             ]}
           />
         </div>
@@ -47,7 +47,7 @@ const PropertyRenting: React.FC = () => {
 
       <CTASection
         title="Ready to start looking?"
-        subtitle="Get in touch and we'll point you toward what to check before you sign anything — including the one clause most Bali leases get wrong."
+        subtitle="Get in touch and we'll point you toward what to check before you sign anything, including the one clause most Bali leases get wrong."
       />
     </>
   );

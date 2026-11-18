@@ -18,7 +18,7 @@ const VisasResidency: React.FC = () => {
       <PageHero
         eyebrow="Immigration"
         title="Bali Visas & Residency, Explained"
-        subtitle={`Every visa an Australian actually uses to holiday, work remotely, retire, or invest in Bali — with real costs. Last verified ${LAST_VERIFIED}.`}
+        subtitle={`Every visa an Australian actually uses to holiday, work remotely, retire, or invest in Bali, with real costs. Last verified ${LAST_VERIFIED}.`}
         image="/images/visas-immigration-hall.jpg"
         imageAlt="Immigration arrival hall at Bali's Ngurah Rai International Airport"
       />
@@ -28,7 +28,7 @@ const VisasResidency: React.FC = () => {
           <Disclaimer>
             Indonesian immigration rules have changed frequently through 2025–2026, including an active enforcement
             crackdown on foreigners working on the wrong visa type. This page is general information, not migration
-            advice — confirm current requirements with a licensed Indonesian immigration agent or via{' '}
+            advice: confirm current requirements with a licensed Indonesian immigration agent or via{' '}
             <a href="https://evisa.imigrasi.go.id" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-white">
               evisa.imigrasi.go.id
             </a>{' '}
@@ -105,15 +105,15 @@ const VisasResidency: React.FC = () => {
 
           <SourceList
             sources={[
-              { label: 'Official eVisa Indonesia — eVOA info', url: 'https://evisa.imigrasi.go.id/front/info/evoa' },
-              { label: "Let's Move Indonesia — B211A vs C1", url: 'https://www.letsmoveindonesia.com/single-entry-tourist-visa-indonesia-b211a-visa-and-differences-from-the-new-tourist-visit-visa-c1/' },
-              { label: 'Emerhub — Second Home Visa', url: 'https://emerhub.com/indonesia/visas/second-home-visa/' },
-              { label: 'Emerhub — Spouse KITAS', url: 'https://emerhub.com/indonesia/visas/spouse-kitas/' },
-              { label: 'RoamHub — Remote Worker (E33G) KITAS', url: 'https://roamhub.io/nomad-visa/indonesia-kitas/' },
-              { label: "Let's Move Indonesia — Retirement Visa", url: 'https://www.letsmoveindonesia.com/indonesia-retirement-visa/' },
-              { label: 'Cekindo — KITAP Guide', url: 'https://www.cekindo.com/blog/kitap-stay-permit-indonesia' },
-              { label: 'ivisa.com — 2026 Bali Visa Crackdown', url: 'https://www.ivisa.com/news/2026-05-13-id-bali-visa-crackdown-influencers-volunteers' },
-              { label: 'Emerhub — Golden Visa', url: 'https://emerhub.com/indonesia/golden-visa/' },
+              { label: 'Official eVisa Indonesia: eVOA info', url: 'https://evisa.imigrasi.go.id/front/info/evoa' },
+              { label: "Let's Move Indonesia: B211A vs C1", url: 'https://www.letsmoveindonesia.com/single-entry-tourist-visa-indonesia-b211a-visa-and-differences-from-the-new-tourist-visit-visa-c1/' },
+              { label: 'Emerhub: Second Home Visa', url: 'https://emerhub.com/indonesia/visas/second-home-visa/' },
+              { label: 'Emerhub: Spouse KITAS', url: 'https://emerhub.com/indonesia/visas/spouse-kitas/' },
+              { label: 'RoamHub: Remote Worker (E33G) KITAS', url: 'https://roamhub.io/nomad-visa/indonesia-kitas/' },
+              { label: "Let's Move Indonesia: Retirement Visa", url: 'https://www.letsmoveindonesia.com/indonesia-retirement-visa/' },
+              { label: 'Cekindo: KITAP Guide', url: 'https://www.cekindo.com/blog/kitap-stay-permit-indonesia' },
+              { label: 'ivisa.com: 2026 Bali Visa Crackdown', url: 'https://www.ivisa.com/news/2026-05-13-id-bali-visa-crackdown-influencers-volunteers' },
+              { label: 'Emerhub: Golden Visa', url: 'https://emerhub.com/indonesia/golden-visa/' },
             ]}
           />
         </div>

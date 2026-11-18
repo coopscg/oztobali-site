@@ -15,7 +15,7 @@ interface CTASectionProps {
 const CTASection: React.FC<CTASectionProps> = ({
   title,
   subtitle,
-  ctaLabel = 'Talk to us about your move',
+  ctaLabel = 'Ask us a question',
   ctaTo = '/contact',
 }) => {
   return (

@@ -13,14 +13,15 @@ const AffiliateLinks: React.FC<AffiliateLinksProps> = ({ categories, title = 'Us
 
   return (
     <div className="bg-white/[0.03] border border-white/5 rounded-2xl p-6 my-10">
-      <h3 className="text-xs font-bold uppercase tracking-widest text-[#8FA69E] mb-4">{title}</h3>
+      <h3 className="text-xs font-bold uppercase tracking-widest text-[#8FA69E] mb-1">{title}</h3>
+      <p className="text-xs text-[#8FA69E]/80 mb-4">Some of these may be affiliate links: we may earn a commission at no extra cost to you.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {links.map((link) => (
           <a
             key={link.name}
             href={link.url}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored noopener noreferrer"
             className="group flex items-start justify-between gap-2 bg-black/20 rounded-xl p-3.5 hover:bg-black/30 transition-colors"
           >
             <div>

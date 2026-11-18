@@ -20,7 +20,7 @@ const BlogIndex: React.FC = () => {
             Real Answers, Properly Sourced
           </h1>
           <p className="text-xl text-[#B9CFC9] font-light max-w-2xl mx-auto">
-            The questions Australians actually ask before moving to Bali — answered with citations, not vibes.
+            The questions Australians actually ask before moving to Bali: answered with citations, not vibes.
           </p>
         </div>
 

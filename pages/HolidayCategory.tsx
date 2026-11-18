@@ -77,7 +77,7 @@ const HolidayCategory: React.FC = () => {
 
       <CTASection
         title="Loved it enough to think about staying longer?"
-        subtitle="See what it actually takes to live in Bali long-term — visas, tax, and property, explained plainly."
+        subtitle="See what it actually takes to live in Bali long-term: visas, tax, and property, explained plainly."
         ctaTo="/visas-residency"
         ctaLabel="See visas & residency"
       />

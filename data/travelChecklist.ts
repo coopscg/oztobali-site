@@ -19,7 +19,7 @@ export const checklistSections: TaxSection[] = [
     list: [
       'Make sure routine vaccines are current: MMR, tetanus/DTP, and polio.',
       'Hepatitis A and Typhoid are commonly recommended for Indonesia by Australian travel doctors.',
-      'Rabies is often discussed too, given documented circulation in Bali since 2008 (dogs and monkeys specifically) — worth raising if you plan to spend time outside resort areas.',
+      'Rabies is often discussed too, given documented circulation in Bali since 2008 (dogs and monkeys specifically): worth raising if you plan to spend time outside resort areas.',
       'Japanese Encephalitis is generally only relevant for extended stays in rural or rice-farming areas, not a standard short resort holiday.',
       'Yellow fever is not required arriving from Australia. It only applies if you\'re arriving in Indonesia from a yellow-fever-risk country, relevant only if Bali is one leg of a longer multi-country trip.',
     ],
@@ -28,7 +28,7 @@ export const checklistSections: TaxSection[] = [
   {
     title: 'The Bali tourist levy',
     body: 'A one-off IDR 150,000 (about AUD 15) fee per foreign visitor, separate from your visa cost, introduced to fund environmental and cultural preservation. Pay online in advance for a QR voucher, or at a BRI bank counter in arrivals if you haven\'t paid ahead. KITAS and KITAP holders are exempt.',
-    verify: 'Use only the official domain (lovebali.baliprov.go.id) — scam look-alike payment sites have targeted this exact levy.',
+    verify: 'Use only the official domain (lovebali.baliprov.go.id): scam look-alike payment sites have targeted this exact levy.',
   },
   {
     title: 'Duty-free and customs',

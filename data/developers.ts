@@ -38,7 +38,7 @@ export const developers: Developer[] = [
     areas: ['Tabanan (large-scale)', 'Wider Indonesia'],
     founded: 'Decades of national operating history',
     trackRecord: "One of Indonesia's largest listed developers, with multiple \"Best Developer\" industry awards nationally.",
-    notableProjects: ['Ciputra Beach Resort Tabanan — 80-hectare, 1.7km shoreline development, managed by Rosewood'],
+    notableProjects: ['Ciputra Beach Resort Tabanan: 80-hectare, 1.7km shoreline development, managed by Rosewood'],
     website: 'https://bali.realestate/faq/the-best-real-estate-developers-in-bali-in-2024/',
   },
   {
@@ -68,4 +68,4 @@ export const developers: Developer[] = [
 ];
 
 export const developerVerifyNote =
-  'This list favours developers with 10+ years of operating history and independently verifiable delivered projects. Some smaller or newer operators exist with strong reputations but thinner independent verification — always check recent buyer reviews and confirm current project delivery status directly with any developer before committing funds.';
+  'This list favours developers with 10+ years of operating history and independently verifiable delivered projects. Some smaller or newer operators exist with strong reputations but thinner independent verification: always check recent buyer reviews and confirm current project delivery status directly with any developer before committing funds.';

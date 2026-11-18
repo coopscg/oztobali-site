@@ -12,7 +12,7 @@ const Credits: React.FC = () => {
       <PageHero
         eyebrow="Attribution"
         title="Photo Credits"
-        subtitle="Every photo on this site is real, freely licensed Bali photography — credited here in full."
+        subtitle="Every photo on this site is real, freely licensed Bali photography: credited here in full."
       />
       <section className="px-6 pb-24">
         <div className="container mx-auto max-w-3xl">
