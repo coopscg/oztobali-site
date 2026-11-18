@@ -25,7 +25,7 @@ const BlogIndex: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {blogPosts.map((post, index) => (
+          {[...blogPosts].sort((a, b) => b.date.localeCompare(a.date)).map((post, index) => (
             <motion.div
               key={post.slug}
               initial={{ opacity: 0, y: 30 }}

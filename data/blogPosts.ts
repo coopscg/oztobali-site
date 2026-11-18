@@ -1,6 +1,8 @@
 import { BlogPost } from '../types';
+import { newPosts } from './newPosts';
+export type { BlogPost } from '../types';
 
-export const blogPosts: BlogPost[] = [
+const basePosts: BlogPost[] = [
   {
     slug: 'kitas-vs-second-home-visa',
     image: '/images/visas-immigration-hall.jpg',
@@ -162,6 +164,8 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 ];
+
+export const blogPosts: BlogPost[] = [...basePosts, ...newPosts];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);

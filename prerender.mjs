@@ -106,6 +106,14 @@ const rss = `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n  <cha
 fs.writeFileSync(path.join(distDir, 'rss.xml'), rss);
 console.log('Generated rss.xml with', sortedPosts.length, 'posts');
 
+// Generate ads.txt from the AdSense publisher ID in lib/ads.ts (only once one is set)
+const adsConfig = fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), 'lib', 'ads.ts'), 'utf8');
+const pubMatch = adsConfig.match(/ADSENSE_CLIENT\s*=\s*'ca-(pub-\d+)'/);
+if (pubMatch) {
+  fs.writeFileSync(path.join(distDir, 'ads.txt'), `google.com, ${pubMatch[1]}, DIRECT, f08c47fec0942fa0\n`);
+  console.log('Generated ads.txt for', pubMatch[1]);
+}
+
 // Clean up the SSR-only build output
 fs.rmSync(ssrDir, { recursive: true, force: true });
 console.log('Prerendering complete.');

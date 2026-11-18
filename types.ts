@@ -52,6 +52,12 @@ export interface BlogPost {
   content: BlogBlock[];
   image: string;
   imageAlt: string;
+  // Primary sources shown under the post
+  sources?: { label: string; url: string }[];
+  // Affiliate categories to recommend at the end of the post
+  affiliates?: ('accommodation' | 'activities' | 'money' | 'connectivity' | 'insurance' | 'property' | 'legal')[];
+  // Date the facts were last checked, e.g. '2026-11-18'
+  lastVerified?: string;
 }
 
 export interface EnquiryForm {

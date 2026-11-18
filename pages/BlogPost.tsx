@@ -3,8 +3,46 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Calendar, Clock } from 'lucide-react';
 import { getPostBySlug, blogPosts } from '../data/blogPosts';
+import { BlogBlock } from '../types';
 import { useSEO } from '../hooks/useSEO';
 import { postSEO, notFoundSEO } from '../seo/pages';
+import AdSlot from '../components/AdSlot';
+import AffiliateLinks from '../components/AffiliateLinks';
+import SourceList from '../components/SourceList';
+
+function renderBlock(block: BlogBlock, i: number) {
+  if (block.type === 'h2') {
+    return (
+      <h2 key={i} className="text-2xl md:text-3xl font-bold text-[#F6EFE4] pt-6">
+        {block.text}
+      </h2>
+    );
+  }
+  if (block.type === 'ul') {
+    return (
+      <ul key={i} className="space-y-3 pl-1">
+        {block.items?.map((item, j) => (
+          <li key={j} className="flex items-start gap-3 text-lg text-[#B9CFC9] font-light leading-relaxed">
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#E3A857] flex-shrink-0" />
+            {item}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+  if (block.type === 'callout') {
+    return (
+      <div key={i} className="border-l-4 border-[#E3A857] bg-[#E3A857]/10 rounded-r-2xl px-6 py-5 text-lg text-[#F6EFE4] leading-relaxed">
+        {block.text}
+      </div>
+    );
+  }
+  return (
+    <p key={i} className="text-lg text-[#B9CFC9] font-light leading-relaxed">
+      {block.text}
+    </p>
+  );
+}
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -16,7 +54,11 @@ const BlogPost: React.FC = () => {
     return <Navigate to="/blog" replace />;
   }
 
-  const otherPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const otherPosts = [...blogPosts]
+    .filter((p) => p.slug !== post.slug)
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 2);
+  const adAfter = Math.max(2, Math.floor(post.content.length * 0.4));
 
   return (
     <article className="pt-40 pb-32 px-6">
@@ -53,32 +95,27 @@ const BlogPost: React.FC = () => {
 
           <div className="space-y-6">
             {post.content.map((block, i) => {
-              if (block.type === 'h2') {
-                return (
-                  <h2 key={i} className="text-2xl md:text-3xl font-bold text-[#F6EFE4] pt-6">
-                    {block.text}
-                  </h2>
-                );
-              }
-              if (block.type === 'ul') {
-                return (
-                  <ul key={i} className="space-y-3 pl-1">
-                    {block.items?.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-lg text-[#B9CFC9] font-light leading-relaxed">
-                        <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#E3A857] flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                );
-              }
-              return (
-                <p key={i} className="text-lg text-[#B9CFC9] font-light leading-relaxed">
-                  {block.text}
-                </p>
-              );
+              const ad = i === adAfter ? <AdSlot key={`ad-${i}`} slot="inArticle" /> : null;
+              const el = renderBlock(block, i);
+              return ad ? [ad, el] : el;
             })}
           </div>
+
+          {post.lastVerified && (
+            <p className="mt-10 text-sm text-[#8FA69E]">
+              Facts last verified{' '}
+              {new Date(post.lastVerified).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })}.
+              Rules change, so always confirm on the official sites below before you pay or travel.
+            </p>
+          )}
+
+          {post.affiliates && post.affiliates.length > 0 && (
+            <AffiliateLinks categories={post.affiliates} title="Useful for this trip" />
+          )}
+
+          {post.sources && post.sources.length > 0 && <SourceList sources={post.sources} />}
+
+          <AdSlot slot="endOfArticle" />
 
           <div className="mt-16 bg-gradient-to-br from-[#0B4F4A] to-[#062420] border border-[#E3A857]/15 rounded-[32px] p-10 text-center">
             <h3 className="text-2xl font-bold text-[#F6EFE4] mb-3">Got a question of your own?</h3>
