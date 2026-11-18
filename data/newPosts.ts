@@ -26,7 +26,7 @@ export const newPosts: BlogPost[] = [
         type: 'ul',
         items: [
           'Apply on the official Indonesian immigration site, evisa.imigrasi.go.id. Nothing else.',
-          'It is valid for 30 days and can be extended once for another 30 days while you are in Indonesia, subject to immigration approval.',
+          'It is valid for 30 days and can be extended once for another 30 days. You start the extension online, but you still have to visit an immigration office in person for photos and fingerprints.',
           'Kids need their own visa, there is no family discount.',
           'Third-party sites charge AUD 80 to 150 for exactly the same visa. They are not illegal, but you are paying double for nothing.',
         ],
@@ -40,7 +40,7 @@ export const newPosts: BlogPost[] = [
           'Pay at the official Love Bali site, lovebali.baliprov.go.id, using the Pay Tourist Levy button. You can pay for one person or a group.',
           'You will get a voucher with a QR code by email. Screenshot it, because spotty airport wifi is not your friend.',
           'If you leave Indonesia and come back, for example a side trip to Singapore, you pay it again.',
-          'You can pay on arrival at the airport, but doing it at home is faster and one less queue.',
+          "Pay before you fly. Don't plan on paying at the airport.",
         ],
       },
       { type: 'h2', text: '4. All Indonesia arrival card (free)' },
@@ -175,8 +175,8 @@ export const newPosts: BlogPost[] = [
     ],
     sources: [
       { label: 'Smartraveller: Indonesia travel advice (travel, driving and health)', url: 'https://www.smartraveller.gov.au/destinations/asia/indonesia' },
-      { label: 'Smartraveller: travel insurance', url: 'https://www.smartraveller.gov.au/before-you-go/insurance' },
-      { label: 'NRMA: International Driving Permits', url: 'https://www.mynrma.com.au/travel/international-driving-permit' },
+      { label: 'Smartraveller: travel insurance', url: 'https://www.smartraveller.gov.au/travel-essentials/travel-insurance' },
+      { label: 'NRMA: International Driving Permits', url: 'https://www.mynrma.com.au/travel/international-driving-permits' },
     ],
   },
   {

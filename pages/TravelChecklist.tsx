@@ -7,7 +7,9 @@ import TaxSections from '../components/TaxSections';
 import AffiliateLinks from '../components/AffiliateLinks';
 import { useSEO } from '../hooks/useSEO';
 import { travelChecklistSEO } from '../seo/pages';
-import { checklistSections, LAST_VERIFIED_CHECKLIST } from '../data/travelChecklist';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { checklistSections, checklistGuides, LAST_VERIFIED_CHECKLIST } from '../data/travelChecklist';
 
 const TravelChecklist: React.FC = () => {
   useSEO(travelChecklistSEO());
@@ -17,7 +19,7 @@ const TravelChecklist: React.FC = () => {
       <PageHero
         eyebrow="Before You Fly"
         title="New Traveller Checklist"
-        subtitle={`Visas, vaccinations, the tourist levy, and duty-free rules both directions. Last verified ${LAST_VERIFIED_CHECKLIST}.`}
+        subtitle={`Everything an Australian needs to sort before flying to Bali: visa, tourist levy, arrival card, health, duty free and safety. Last verified ${LAST_VERIFIED_CHECKLIST}.`}
         image="/images/visas-immigration-hall.jpg"
         imageAlt="Immigration arrival hall at Bali's Ngurah Rai International Airport"
       />
@@ -36,7 +38,21 @@ const TravelChecklist: React.FC = () => {
         <div className="container mx-auto max-w-4xl">
           <TaxSections sections={checklistSections} />
 
-          <AffiliateLinks categories={['money', 'connectivity', 'insurance']} title="Sort this before you fly" />
+          <div className="bg-white/[0.03] border border-white/5 rounded-2xl p-6 my-10">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-[#8FA69E] mb-4">Go deeper</h2>
+            <ul className="space-y-2">
+              {checklistGuides.map((g) => (
+                <li key={g.to}>
+                  <Link to={g.to} className="group inline-flex items-start gap-2 text-[#F6EFE4] hover:text-[#E3A857] transition-colors">
+                    <ArrowRight className="w-4 h-4 mt-1 shrink-0 text-[#E3A857]" />
+                    {g.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <AffiliateLinks categories={['accommodation', 'connectivity', 'money']} title="Sort this before you fly" />
 
           <SourceList
             sources={[
@@ -44,8 +60,9 @@ const TravelChecklist: React.FC = () => {
               { label: 'All Indonesia: unified arrival card', url: 'https://allindonesia.imigrasi.go.id' },
               { label: 'Australian Immunisation Handbook: travel recommendations', url: 'https://immunisationhandbook.health.gov.au' },
               { label: 'Smartraveller: Indonesia travel advice', url: 'https://www.smartraveller.gov.au/destinations/asia/indonesia' },
-              { label: 'Smartraveller: travel insurance', url: 'https://www.smartraveller.gov.au/before-you-go/the-basics/travel-insurance' },
+              { label: 'Smartraveller: travel insurance', url: 'https://www.smartraveller.gov.au/travel-essentials/travel-insurance' },
               { label: 'Bali tourist levy: official portal', url: 'https://lovebali.baliprov.go.id' },
+              { label: 'Bali tourist levy: exemption applications', url: 'https://lovebali.baliprov.go.id/exception' },
               { label: 'Indonesian Directorate General of Customs and Excise', url: 'https://www.beacukai.go.id' },
               { label: 'Australian Border Force: duty free', url: 'https://www.abf.gov.au/entering-and-leaving-australia/duty-free' },
               { label: 'AUSTRAC: moving money overseas', url: 'https://www.austrac.gov.au/general-public/moving-money-overseas' },

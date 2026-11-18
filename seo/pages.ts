@@ -148,9 +148,9 @@ export function privacySEO(): SEOInput {
 
 export function travelChecklistSEO(): SEOInput {
   return {
-    title: 'New Traveller Checklist: Visas, Vaccinations & Duty-Free | OztoBali',
+    title: 'Bali Travel Checklist for Australians (2026): Visa, Levy & Duty Free | OztoBali',
     description:
-      'Everything a first-time Australian traveller needs before flying to Bali: e-VOA visa, vaccinations, the Bali tourist levy, and duty-free rules both directions.',
+      'Everything Australians need before flying to Bali in 2026: the e-VOA visa, IDR 150,000 tourist levy, free arrival card, vaccinations, duty free both ways and safety tips.',
     path: '/travel-checklist',
   };
 }
