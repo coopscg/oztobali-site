@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import VisasResidency from './pages/VisasResidency';
@@ -19,6 +19,7 @@ import Partner from './pages/Partner';
 import TravelChecklist from './pages/TravelChecklist';
 import Privacy from './pages/Privacy';
 import About from './pages/About';
+import Planner from './pages/Planner';
 
 const App: React.FC = () => {
   return (
@@ -42,6 +43,8 @@ const App: React.FC = () => {
         <Route path="/travel-checklist" element={<TravelChecklist />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/about" element={<About />} />
+        <Route path="/plan" element={<Navigate to="/plan/holiday" replace />} />
+        <Route path="/plan/:track" element={<Planner />} />
       </Route>
     </Routes>
   );

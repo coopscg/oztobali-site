@@ -3,6 +3,7 @@ import { blogPosts, BlogPost } from '../data/blogPosts';
 import { faqs } from '../data/faqs';
 import { holidayCategories, HolidayCategoryInfo } from '../data/holidayPlaces';
 import { developers } from '../data/developers';
+import { getTrack } from '../data/tripPlanner';
 
 export function homeSEO(): SEOInput {
   return {
@@ -127,6 +128,33 @@ export function holidayCategorySEO(cat: HolidayCategoryInfo): SEOInput {
     title: `${cat.label} in Bali: Where to Go & What to Know | OztoBali`,
     description: cat.intro,
     path: `/holidays/${cat.slug}`,
+  };
+}
+
+export function plannerSEO(slug: string): SEOInput {
+  const track = getTrack(slug) ?? getTrack('holiday')!;
+  const isHoliday = track.slug === 'holiday';
+  return {
+    title: isHoliday
+      ? 'How to Plan a Bali Holiday From Australia: Step-by-Step Guide (2026) | OztoBali'
+      : 'Moving to Bali From Australia: Step-by-Step Guide (2026) | OztoBali',
+    description: isHoliday
+      ? 'Plan a Bali trip from scratch: when to go, where to stay, flights, visa, levy, arrival card, money, activities and coming home, in the order you need them.'
+      : 'Moving to Bali from Australia in 10 steps: choosing a visa, leaving the Australian tax system, Indonesian tax, renting, buying, money, health cover and settling in.',
+    path: `/plan/${track.slug}`,
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: track.title,
+      description: track.intro,
+      step: track.steps.map((s, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        name: s.title,
+        text: s.summary,
+        url: `${SITE_URL}/plan/${track.slug}#${s.id}`,
+      })),
+    },
   };
 }
 
@@ -266,6 +294,8 @@ export function getAllRoutes(): string[] {
     '/travel-checklist',
     '/privacy',
     '/about',
+    '/plan/holiday',
+    '/plan/move',
   ];
 }
 
@@ -285,6 +315,7 @@ export function getSEOForRoute(path: string): SEOInput {
   if (path === '/travel-checklist') return travelChecklistSEO();
   if (path === '/privacy') return privacySEO();
   if (path === '/about') return aboutSEO();
+  if (path.startsWith('/plan/')) return plannerSEO(path.split('/')[2]);
   if (path === '/blog') return blogIndexSEO();
   if (path.startsWith('/holidays/')) {
     const slug = path.replace('/holidays/', '');

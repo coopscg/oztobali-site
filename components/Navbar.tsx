@@ -87,10 +87,10 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             ))}
 
             <Link
-              to="/travel-checklist"
+              to="/plan/holiday"
               className="ml-2 px-5 py-2.5 bg-gold text-ink font-bold text-sm rounded-full hover:bg-cream transition-all duration-300 transform active:scale-95 whitespace-nowrap"
             >
-              Bali Checklist
+              Plan My Trip
             </Link>
           </div>
 
@@ -168,11 +168,11 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               ))}
 
               <Link
-                to="/travel-checklist"
+                to="/plan/holiday"
                 onClick={closeMobileMenu}
                 className="mt-4 px-8 py-4 bg-gold text-ink font-bold text-lg rounded-full text-center hover:bg-cream transition-all"
               >
-                Bali Checklist
+                Plan My Trip
               </Link>
             </div>
           </motion.div>
